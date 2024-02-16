@@ -1,0 +1,11 @@
+.header {
+  max-height: 100px;
+  border-bottom: 3px solid var(--primary);
+  .logo {
+    height: 70px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

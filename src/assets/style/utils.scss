@@ -1,0 +1,155 @@
+//alignements flex
+
+.flex {
+  display: flex;
+}
+
+.flexc {
+  flex-direction: column;
+}
+
+.flexf {
+  flex-flow: row wrap;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jca {
+  justify-content: space-around;
+}
+
+.jcb {
+  justify-content: space-between;
+}
+
+.jce {
+  justify-content: space-evenly;
+}
+
+.jcfe {
+  justify-content: flex-end;
+}
+
+.jcfs {
+  justify-content: flex-start;
+}
+
+// text align
+.tac {
+  text-align: center;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tar {
+  text-align: right;
+}
+
+.taj {
+  text-align: justify;
+}
+
+.aic {
+  align-items: center;
+}
+
+//margin
+.mauto {
+  margin: auto;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.m10 {
+  margin: 10px auto;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.m20 {
+  margin: 20px auto;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+.m30 {
+  margin: 30px auto;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+.m50 {
+  margin: 50px;
+}
+
+.maw {
+  max-width: 300px;
+}
+
+.max50 {
+  max-width: 50%;
+  margin: auto;
+}
+
+.max80 {
+  max-width: 80%;
+  margin: auto;
+}
+
+//padding
+.ps10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.ps20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.pb5 {
+  padding-bottom: 5px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}

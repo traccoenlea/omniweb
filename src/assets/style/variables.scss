@@ -1,0 +1,32 @@
+:root {
+  --primary: #000;
+  --secondary: #ffffff;
+  --accent: #be8cdf;
+
+  @font-face {
+    font-family: "Agrandir"; /*Can be any text*/
+    src: local("Agrandir-Regular"),
+      url("../../fonts/Agrandir-Regular.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Agrandir Bold"; /*Can be any text*/
+    src: local("Agrandir-TextBold"),
+      url("../../fonts/Agrandir-TextBold.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Agrandir Wide Light"; /*Can be any text*/
+    src: local("Agrandir-WideLight"),
+      url("../../fonts/Agrandir-WideLight.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Etna"; /*Can be any text*/
+    src: local("Etna"),
+      url("../../fonts/Etna-Sans-serif.otf") format("truetype");
+  }
+
+  --text: "Agrandir", sans-serif;
+  --title: "Etna", sans-serif;
+}
