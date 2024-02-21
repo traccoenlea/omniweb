@@ -1,0 +1,26 @@
+.atoutsListe {
+  // background: beige;
+  width: 70%;
+}
+
+.socials {
+  background: var(--accent);
+  height: 300px;
+
+  padding: 0 5%;
+
+  .cards {
+    height: 60%;
+    width: 100%;
+    .card {
+      height: 100%;
+      width: 30%;
+      background: var(--secondary);
+      border-radius: 20px;
+    }
+  }
+}
+
+.borderCard {
+  border-radius: 20px;
+}

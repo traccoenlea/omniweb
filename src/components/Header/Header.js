@@ -4,7 +4,7 @@ import logo from "../../assets/img/logo.png";
 
 export const Header = () => {
   return (
-    <div className="header flex jcb">
+    <div className="appContainer header flex jcb">
       <NavLink to="" className="flex flexc jcc">
         Nos offres
       </NavLink>
