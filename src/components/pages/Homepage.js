@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
-import Atouts from "../Atouts";
+import Button from "../components/Button/Button";
+import Atouts from "../components/Atouts";
 
 const Homepage = () => {
   return (

@@ -4,28 +4,28 @@ import Facebook from "../../assets/style/components/socials/Facebook";
 import Instagram from "../../assets/style/components/socials/Instagram";
 import LinkedIn from "../../assets/style/components/socials/LinkedIn";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="footer">
       <div className="flex jcb ">
         <div className="footerDivider">
           <h3>Pages</h3>
           <div className="links flex flexc jcb">
-            <NavLink to="">Accueil</NavLink>
-            <NavLink to="">Nos projets</NavLink>
-            <NavLink to="">Nos services</NavLink>
-            <NavLink to="">L'agence</NavLink>
-            <NavLink to="">Blog</NavLink>
+            <NavLink to="/">Accueil</NavLink>
+            <NavLink to="/projets">Nos projets</NavLink>
+            <NavLink to="/offre">Nos services</NavLink>
+            <NavLink to="/agence">L'agence</NavLink>
+            <NavLink to="/blog">Blog</NavLink>
           </div>
         </div>
 
         <div className="footerDivider">
           <h3>Liens utiles</h3>
           <div className="links flex flexc jcb">
-            <NavLink to="">Contact</NavLink>
-            <NavLink to="">Rejoignez-nous</NavLink>
-            <NavLink to="">Mentions légales</NavLink>
-            <NavLink to="">GCU</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/recrutement">Rejoignez-nous</NavLink>
+            <NavLink to="/mentionslegales">Mentions légales</NavLink>
+            <NavLink to="/cgu">CGU</NavLink>
           </div>
         </div>
 
@@ -66,5 +66,3 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;

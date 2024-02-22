@@ -1,13 +1,16 @@
-import Homepage from "./components/Homepage/Homepage";
 import "./assets/style/index.scss";
-import { Header } from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import { Suspense } from "react";
+import { Outlet } from "react-router-dom";
+import { Header } from "./components/components/Header";
+import { Footer } from "./components/components/Footer";
 
 function App() {
   return (
     <div className="container">
       <Header />
-      <Homepage />
+      <Suspense>
+        <Outlet />
+      </Suspense>
       <Footer />
     </div>
   );
