@@ -6,10 +6,8 @@ const Homepage = () => {
   return (
     <div>
       <div className="appContainer">
-        <h1 className="heading">
-          <div className="accentbg primarytxt flex jcc">
-            Titre Présentation OmniWeb
-          </div>
+        <h1 className="">
+          <div className="">Titre Présentation OmniWeb</div>
         </h1>
         <h3 className="maxw80">
           Lorem ipsum dolor sit amet, consectetur adipsicing tempor incididunt
