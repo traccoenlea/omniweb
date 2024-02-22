@@ -1,0 +1,35 @@
+.footer {
+  background: var(--primary);
+  color: var(--secondary);
+  padding: 0 5%;
+  padding-bottom: 25px;
+
+  .footerDivider {
+    width: 30%;
+  }
+
+  h3 {
+    color: var(--accent);
+  }
+
+  .links {
+    a {
+      text-decoration: none;
+      color: var(--secondary);
+    }
+  }
+
+  .bbfooter {
+    border-bottom-color: var(--secondary);
+  }
+
+  .socialsLinks {
+    width: 10%;
+    margin: auto;
+
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+  }
+}
