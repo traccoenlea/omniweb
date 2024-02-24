@@ -1,0 +1,79 @@
+.agencyContainer {
+  margin: 50px 0;
+  //   border: 5px solid black;
+
+  .leftContainer,
+  .rightContainer {
+    width: 40%;
+  }
+
+  .leftContainer {
+    // border: 2px solid green;
+  }
+  .middleContainer {
+    // border: 2px solid rosybrown;
+    width: 20%;
+
+    // .topBorder {
+    //   border-top: 3px solid var(--primary);
+    //   width: 10%;
+    // }
+
+    // .blankSpace {
+    //   width: 10%;
+    //   //   background: purple;
+    // }
+
+    .verticalBorder {
+      border-left: 3px solid var(--primary);
+    }
+  }
+  .rightContainer {
+    // border: 2px solid blueviolet;
+  }
+
+  .stepContainer {
+    // border: 2px solid saddlebrown;
+    width: 100%;
+
+    .topBorder {
+      border-top: 3px solid var(--primary);
+      width: 20%;
+    }
+
+    .blankSpace {
+      width: 20%;
+      // background: purple;
+    }
+
+    .stepText,
+    .stepNumber {
+      width: 40%;
+    }
+
+    .stepText {
+      // border: 2px solid green;
+    }
+
+    .stepNumber {
+      // border: 2px solid grey;
+      font-size: 20rem;
+      opacity: 0.25;
+      //CHECK HERE FOR THE CSS NUMBER AND SPACE BEFORE AND AFTER TEXT
+      line-height: 90%;
+      // margin-bottom: -5%;
+    }
+
+    // .stepLine {
+    //   width: 2.5%;
+    //   height: 100px;
+    //   .top {
+    //     border-top: 3px solid var(--primary);
+    //   }
+
+    //   .left {
+    //     border-left: 3px solid var(--primary);
+    //   }
+    // }
+  }
+}
