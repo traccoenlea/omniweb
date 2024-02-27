@@ -38,6 +38,7 @@ export const Chronologie = () => {
       right: false,
     },
   ];
+
   return (
     <div className="agencyContainer ">
       {dataChrono.map((d, i) => (
@@ -57,11 +58,11 @@ export const Chronologie = () => {
                   className={`${d.right ? "topBorder" : ""} blankSpace`}
                 ></div>
               </div>
-              <div className="stepNumber wideText flex jcc">{d.id}</div>
+              <div className="stepNumber wideText flex jcfs">{d.id}</div>
             </div>
           ) : (
             <div className="stepContainer flex">
-              <div className="stepNumber wideText flex jcc">{d.id}</div>
+              <div className="stepNumber wideText flex jcfs">{d.id}</div>
               <div className="middleContainer flex jcc">
                 <div
                   className={`${d.left ? "topBorder" : ""} blankSpace`}
