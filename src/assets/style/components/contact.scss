@@ -1,0 +1,29 @@
+.formContainer {
+  width: 50%;
+
+  .inputContainer {
+    width: 100%;
+
+    .smallInput,
+    .bigInput {
+      border: none;
+      border-bottom: 2px solid black;
+      background: rgba($color: #afafaf, $alpha: 0.05);
+      &::placeholder {
+        color: var(--primary);
+        font-family: "Agrandir";
+      }
+    }
+    .smallInput {
+      width: 85%;
+    }
+
+    .bigInput {
+      width: 100%;
+    }
+
+    .textareaInput {
+      height: 200px;
+    }
+  }
+}
