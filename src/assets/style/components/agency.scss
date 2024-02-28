@@ -1,3 +1,16 @@
+.TitleAgencyContainer {
+  margin: 7% 0 7% 0;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--accent);
+  display: flex;
+  border-radius: 10px;
+
+  .TitleAgency {
+    margin: 0 12px 18px 12px;
+  }
+}
+
 .agencyContainer {
   margin: 50px 0;
 
@@ -10,6 +23,7 @@
   }
 
   .stepContainer {
+    position: relative;
     width: 100%;
 
     .topBorder {
@@ -24,10 +38,57 @@
     .stepText,
     .stepNumber {
       width: 40%;
+
+      .TitleDateContainer {
+        margin: 0 0 7% 0;
+        width: fit-content;
+        height: fit-content;
+        background-color: var(--primary);
+        display: flex;
+        border-radius: 10px;
+
+        .TitleDate {
+          margin: 0 12px 12px 12px;
+          color: var(--secondary);
+          font-family: "Etna";
+        }
+      }
+      .TextDate {
+        font-size: 1.5rem;
+        margin: 0 0 5% 0;
+      }
+      .ButtonChronoModal:hover {
+        box-shadow: inset 100px 0 0 0 var(--primary);
+        color: white;
+        text-decoration: none;
+      }
+      .ButtonChronoModal:active {
+        transform: scale(1.1);
+      }
+      .ButtonChronoModal {
+        border: none;
+        background: none;
+        height: 6%;
+        width: fit-content;
+        border-radius: 5px;
+        left: 0;
+        font-family: "Agrandir Wide Light";
+        font-size: 1rem;
+        text-decoration: underline;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 var(--primary);
+        color: var(--primary);
+        margin: 0 -0.25rem;
+        padding: 0 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
     }
 
     .stepNumber {
-      font-size: 20rem;
+      font-size: 30rem;
       opacity: 0.25;
       //CHECK HERE FOR THE CSS NUMBER AND SPACE BEFORE AND AFTER TEXT
       line-height: 90%;
