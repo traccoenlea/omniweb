@@ -57,6 +57,10 @@
   align-items: center;
 }
 
+.ais {
+  align-items: flex-start;
+}
+
 //margin
 .mauto {
   margin: auto;
@@ -64,10 +68,6 @@
 
 .mt5 {
   margin-top: 5px;
-}
-
-.mb5 {
-  margin-bottom: 5px;
 }
 
 .m10 {
@@ -113,8 +113,16 @@
   margin-top: 50px;
 }
 
+.mt5 {
+  margin-top: 5%;
+}
+
 .mb50 {
   margin-bottom: 50px;
+}
+
+.mb5 {
+  margin-bottom: 5%;
 }
 
 .m50 {
@@ -125,13 +133,22 @@
   max-width: 300px;
 }
 
+.max80 {
+  max-width: 80%;
+  margin: auto;
+}
+
+.max60 {
+  max-width: 50%;
+  // margin: auto;
+}
 .max50 {
   max-width: 50%;
   margin: auto;
 }
 
-.max80 {
-  max-width: 80%;
+.max40 {
+  max-width: 40%;
   margin: auto;
 }
 

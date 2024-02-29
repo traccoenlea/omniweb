@@ -1,22 +1,28 @@
 import React from "react";
+import Img1 from "../../assets/img/temps.png";
+import Img2 from "../../assets/img/idee.png";
+import Img3 from "../../assets/img/groupes.png";
 
 const Atouts = () => {
   let atouts = [
     {
       id: 1,
       icon: "fa-solid fa-arrow-right",
+      src: Img1,
       text: "Le premier atout est avant tout le premier.",
       after: 1,
     },
     {
       id: 2,
       icon: "fa-solid fa-arrow-right",
+      src: Img2,
       text: "Le premier atout est avant tout le premier.",
       after: 1,
     },
     {
       id: 3,
       icon: "fa-solid fa-arrow-right",
+      src: Img3,
       text: "Le premier atout est avant tout le premier.",
       after: 0,
     },
@@ -29,7 +35,12 @@ const Atouts = () => {
             <div className="atout">
               <div className="flex jcb">
                 <div className="icon flex flexc jcc">
-                  <i className={`${a.icon} flex jcc`} />
+                  {/* <i className={`${a.icon} flex jcc`} /> */}
+                  <img
+                    src={a.src}
+                    alt={`icon ${a.id}`}
+                    className="iconsAtouts"
+                  />
                 </div>
                 <div className="title">
                   <h4 className="">Atout n°{a.id}</h4>
