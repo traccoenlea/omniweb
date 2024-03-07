@@ -1,0 +1,190 @@
+.servicesContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  .Container {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .presentationContainer {
+      .titleServicesContainer {
+        margin: 7% 0 7% 0;
+        width: fit-content;
+        height: fit-content;
+        background-color: var(--accent);
+        display: flex;
+        border-radius: 10px;
+
+        .titleServices {
+          margin: 0 12px 12px 12px;
+        }
+      }
+
+      .presentation {
+        font-size: 1.6rem;
+        margin-bottom: 5%;
+      }
+    }
+
+    .containerPacks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+
+      .packCom {
+        transition: transform 500ms;
+        position: relative;
+        display: flex;
+        flex: 1 0 40%;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 2% 3%;
+        height: 45vh;
+        background-color: var(--primary);
+        border-radius: 25px;
+        color: var(--secondary);
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+          rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+        .leftPart {
+          display: flex;
+          flex-flow: column nowrap;
+
+          .titlePackContainer {
+            margin: 7% 0 7% 0;
+            width: fit-content;
+            height: fit-content;
+            background-color: var(--secondary);
+            display: flex;
+            border-radius: 10px;
+
+            .titlePack {
+              margin: 0 12px 12px 12px;
+              font-family: "Etna";
+              font-size: 2.6rem;
+            }
+          }
+
+          .offrePackContainer {
+            margin: 10% 0 10% 0;
+            .offrePack {
+              font-size: 1.2rem;
+            }
+          }
+
+          .buttonPack {
+            background: none;
+            color: white;
+            border: 0px solid;
+            position: absolute;
+            bottom: 10%;
+            text-align: start;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 500ms;
+
+            i {
+              margin-right: 10px;
+              transform: rotate(-35deg);
+              transition: transform 500ms;
+            }
+          }
+          .buttonPack:hover {
+            transform: scale(1.1);
+            i {
+              transform: rotate(0deg);
+            }
+          }
+        }
+        .rightPart {
+          font-size: 16.5rem;
+          display: flex;
+          width: 50%;
+          flex-flow: row;
+          justify-content: flex-end;
+        }
+      }
+      .packCom:hover {
+        transform: scale(1.05);
+      }
+      .packPink {
+        position: relative;
+        transition: transform 500ms;
+        display: flex;
+        flex: 1 0 40%;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 2% 3%;
+        height: 45vh;
+        background-color: var(--secondary);
+        border-radius: 25px;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+          rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+        .leftPart {
+          display: flex;
+          flex-flow: column nowrap;
+
+          .titlePackContainer {
+            margin: 7% 0 7% 0;
+            width: fit-content;
+            height: fit-content;
+            background-color: var(--accent);
+            display: flex;
+            border-radius: 10px;
+
+            .titlePack {
+              margin: 0 12px 12px 12px;
+              font-family: "Etna";
+              font-size: 2.6rem;
+            }
+          }
+          .offrePackContainer {
+            margin: 10% 0 10% 0;
+            .offrePack {
+              font-size: 1.2rem;
+            }
+          }
+
+          .buttonPack {
+            background: none;
+            color: rgb(0, 0, 0);
+            border: 0px solid;
+            position: absolute;
+            bottom: 10%;
+            text-align: start;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 500ms;
+
+            i {
+              margin-right: 10px;
+              transform: rotate(-35deg);
+              transition: transform 500ms;
+            }
+          }
+          .buttonPack:hover {
+            transform: scale(1.1);
+            i {
+              transform: rotate(0deg);
+            }
+          }
+        }
+        .rightPart {
+          font-size: 16.5rem;
+          display: flex;
+          width: 50%;
+          flex-flow: row;
+          justify-content: flex-end;
+        }
+      }
+      .packPink:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
