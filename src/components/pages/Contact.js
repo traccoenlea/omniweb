@@ -2,6 +2,7 @@ import React from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { sendingEmail } from "../../apis/contact";
 
 export const Contact = () => {
   const yupSchema = yup.object({
@@ -16,6 +17,16 @@ export const Contact = () => {
       .required("Ce champ doit être renseigné")
       .min(10, "Votre message doit faire minimum 10 caractères.")
       .max(500, "Votre message doit faire maximum 500 caractères."),
+    // consent: yup
+    //   .boolean(true)
+    //   .required("Vous ne pouvez pas nous contacter sans cocher cette case."),
+    consent: yup
+      .bool()
+      .oneOf(
+        [true],
+        "Vous ne pouvez pas nous contacter sans cocher cette case."
+      )
+      .required("Vous ne pouvez pas nous contacter sans cocher cette case."),
   });
 
   const {
@@ -23,20 +34,53 @@ export const Contact = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     setError,
+    reset,
   } = useForm({
     defaultValues: {
       name: "",
       surname: "",
       email: "",
       message: "",
+      consent: false,
     },
     resolver: yupResolver(yupSchema),
   });
 
   const submit = handleSubmit(async (values) => {
     try {
-      alert("form submitted");
-      console.log(values);
+      let today = new Date();
+
+      today =
+        today.getFullYear() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getDate() +
+        " " +
+        today.getHours() +
+        ":" +
+        today.getMinutes() +
+        ":00";
+
+      const email = values.email;
+      const name = values.name;
+      const surname = values.surname;
+      const message = values.message;
+
+      const data = [
+        {
+          email: email,
+          name: name,
+          surname: surname,
+          message: message,
+          date: today,
+        },
+      ];
+
+      // console.log(values);
+      await sendingEmail(data);
+      alert("Nous avons bien reçu votre demande de contact !");
+      reset();
     } catch (error) {
       console.error(error);
     }
@@ -52,29 +96,35 @@ export const Contact = () => {
       </div>
       <form onSubmit={submit} className="formContainer">
         <div className="flex jcb">
-          <div className="inputContainer">
-            {/* <label htmlFor="surname">Nom</label> */}
-            <input
-              type="text"
-              id="surname"
-              {...register("surname")}
-              placeholder="Nom..."
-              className="smallInput"
-            />
+          <div className="flex flexc inputContainer">
+            <div className="">
+              {/* <label htmlFor="surname">Nom</label> */}
+              <input
+                type="text"
+                id="surname"
+                {...register("surname")}
+                placeholder="Nom..."
+                className="smallInput"
+              />
+            </div>
+            {errors?.surname && (
+              <p className="error">{errors.surname.message}</p>
+            )}
           </div>
-          {errors?.surname && <p className="error">{errors.surname.message}</p>}
 
-          <div className="inputContainer flex jcfe">
-            {/* <label htmlFor="name">Prénom</label> */}
-            <input
-              type="text"
-              id="name"
-              {...register("name")}
-              placeholder="Prénom..."
-              className="smallInput"
-            />
+          <div className="flex flexc inputContainer">
+            <div className=" flex jcfe">
+              {/* <label htmlFor="name">Prénom</label> */}
+              <input
+                type="text"
+                id="name"
+                {...register("name")}
+                placeholder="Prénom..."
+                className="smallInput"
+              />
+            </div>
+            {errors?.name && <p className="error ">{errors.name.message}</p>}
           </div>
-          {errors?.name && <p className="error">{errors.name.message}</p>}
         </div>
 
         <div className="inputContainer">
@@ -99,7 +149,26 @@ export const Contact = () => {
           />
         </div>
         {errors?.message && <p className="error">{errors.message.message}</p>}
+        <div className="flex jce">
+          <div className="flex flexc jcc mb5">
+            <input
+              type="checkbox"
+              className="flex flexc "
+              id="consent"
+              {...register("consent")}
+            />
+          </div>
 
+          <div>
+            <label htmlFor="consent" className="flex flexc jcfe">
+              J'accepte que mes informations soient enregistrées afin d'être
+              recontacté(e) par l'entreprise Omni Web .
+            </label>
+            {errors?.consent && (
+              <p className="error">{errors.consent.message}</p>
+            )}
+          </div>
+        </div>
         <button>Envoyer</button>
       </form>
     </div>

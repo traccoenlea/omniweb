@@ -1,6 +1,14 @@
 .formContainer {
   width: 50%;
 
+  .error {
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--accent);
+    margin: 5px 0;
+  }
+
   .inputContainer {
     width: 100%;
 
