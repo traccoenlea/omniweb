@@ -2,7 +2,7 @@ import React from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { sendingEmail } from "../../apis/contact";
+import { addContactToDb, sendingEmail } from "../../apis/contact";
 
 export const Contact = () => {
   const yupSchema = yup.object({
@@ -77,10 +77,12 @@ export const Contact = () => {
         },
       ];
 
-      // console.log(values);
-      await sendingEmail(data);
-      alert("Nous avons bien reçu votre demande de contact !");
-      reset();
+      const contactDB = await addContactToDb(data);
+      if (contactDB !== false) {
+        await sendingEmail(data);
+        alert("Nous avons bien reçu votre demande de contact !");
+        reset();
+      }
     } catch (error) {
       console.error(error);
     }
