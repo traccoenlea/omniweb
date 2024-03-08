@@ -1,11 +1,28 @@
 .footer {
   background: var(--primary);
   color: var(--secondary);
-  padding: 0 5%;
-  padding-bottom: 25px;
+  padding: 8vh 12% 8vh 12%;
+
+  .dividerContainer {
+    @media screen and (max-width: 720px) {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+  }
 
   .footerDivider {
     width: 30%;
+    @media screen and (max-width: 720px) {
+      width: 100%;
+      margin-bottom: 10%;
+    }
+  }
+  .footerDividerContact {
+    width: 30%;
+    @media screen and (max-width: 720px) {
+      width: 100%;
+      // margin-bottom: 10%;
+    }
   }
 
   h3 {
@@ -13,23 +30,37 @@
   }
 
   .links {
+    margin-top: 6%;
     a {
       text-decoration: none;
       color: var(--secondary);
+      margin-bottom: 2%;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   }
 
   .bbfooter {
     border-bottom-color: var(--secondary);
+    margin: 8vh 0 8vh 0;
   }
 
   .socialsLinks {
-    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
     margin: auto;
+    @media screen and (max-width: 720px) {
+      width: 50%;
+    }
 
     a {
       color: var(--secondary);
       text-decoration: none;
+      margin-right: 10%;
     }
   }
 }

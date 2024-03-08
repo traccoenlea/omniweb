@@ -1,25 +1,194 @@
+.TitleHomepageContainer {
+  margin: 7% 0 7% 0;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--accent);
+  display: flex;
+  border-radius: 10px;
+  .TitleHomepage {
+    margin: 0 12px 12px 12px;
+  }
+}
+
+//Section Atouts
+.AtoutsContainer {
+  margin: 5% 0 5% 0;
+
+  .TitleAtoutsContainer {
+    margin: 0 0 7% 0;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--primary);
+    display: flex;
+    border-radius: 10px;
+
+    .TitleAtouts {
+      font-family: "Etna";
+      font-size: 2.6rem;
+      color: var(--secondary);
+      margin: 0 12px 12px 12px;
+    }
+  }
+}
+
 .atoutsListe {
-  width: 70%;
+  width: 75%;
+  .iconsAtouts {
+    width: 2.6rem;
+  }
+}
+
+// Section service
+.TitleServiceContainer {
+  margin: 0 10% 7% 0;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--accent);
+  display: flex;
+  border-radius: 10px;
+  .TitleService {
+    font-family: "Etna";
+    font-size: 2.6rem;
+    margin: 0 12px 12px 12px;
+  }
+}
+.DescriptionService {
+  margin-bottom: 7%;
+  font-size: 1.6rem;
+  margin-right: 5%;
 }
 
 .socials {
   background: var(--accent);
-  height: 300px;
+  height: 350px;
+  padding: 2% 12% 2% 12%;
 
-  padding: 0 5%;
-
+  h2 {
+    color: var(--secondary);
+    font-family: "Etna";
+    margin-bottom: 5%;
+  }
   .cards {
     height: 60%;
     width: 100%;
-    .card {
+
+    // carte instagram
+    .card1 {
+      box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
       height: 100%;
-      width: 30%;
+      width: 25%;
       background: var(--secondary);
       border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 1.2s;
+      font-size: 50px;
+      p {
+        margin-top: 5%;
+        font-size: 1.3rem;
+      }
+    }
+    .card1:hover {
+      transform: scale(1.05);
+      background-image: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+      );
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      transition: 500ms ease-in-out;
+      font-size: 60px;
+    }
+
+    // carte Facebook
+    .card2 {
+      box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      height: 100%;
+      width: 25%;
+      background: var(--secondary);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 1.2s;
+      font-size: 50px;
+      p {
+        margin-top: 5%;
+        font-size: 1.3rem;
+      }
+    }
+    .card2:hover {
+      transform: scale(1.05);
+      // background-color: #0866ff;
+      background: rgb(40, 175, 252);
+      background: linear-gradient(
+        90deg,
+        rgba(40, 175, 252, 1) 0%,
+        rgba(20, 115, 228, 1) 100%
+      );
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      transition: 500ms ease-in-out;
+      font-size: 60px;
+    }
+
+    // carte Linkedin
+    .card3 {
+      box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      height: 100%;
+      width: 25%;
+      background: var(--secondary);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 1.2s;
+      font-size: 50px;
+      p {
+        margin-top: 5%;
+        font-size: 1.3rem;
+      }
+    }
+    .card3:hover {
+      transform: scale(1.05);
+      background-color: #0073b2;
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      transition: 500ms ease-in-out;
+      font-size: 60px;
     }
   }
 }
 
 .borderCard {
   border-radius: 20px;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }

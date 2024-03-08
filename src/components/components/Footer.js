@@ -7,7 +7,7 @@ import LinkedIn from "../../assets/style/components/socials/LinkedIn";
 export const Footer = () => {
   return (
     <div className="footer">
-      <div className="flex jcb ">
+      <div className="flex jcb dividerContainer">
         <div className="footerDivider">
           <h3>Pages</h3>
           <div className="links flex flexc jcb">
@@ -29,9 +29,11 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="footerDivider">
+        <div className="footerDividerContact">
           <h3>Contact</h3>
-          <p>Lorem ipsum machin chouette</p>
+          <div className="links">
+            <p>Lorem ipsum machin chouette</p>
+          </div>
         </div>
       </div>
 

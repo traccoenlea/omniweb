@@ -1,0 +1,100 @@
+//background blur
+.backgroundModal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px);
+
+  //modal
+  .modalServ {
+    padding: 10vh;
+    z-index: 5000;
+    position: fixed;
+    bottom: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 70vh;
+    background-color: var(--secondary);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 10px;
+
+    .modalServContainer {
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+
+      //Titre
+      .titleContainer {
+        width: fit-content;
+        height: fit-content;
+        background-color: var(--accent);
+        display: flex;
+        border-radius: 10px;
+        .titleServModal {
+          margin: 0 12px 12px 12px;
+          font-family: "Etna";
+          font-size: 2.6rem;
+        }
+      }
+
+      //details
+      .detailContainer {
+        margin-top: 5%;
+        .detail {
+          display: flex;
+          margin-bottom: 1%;
+          p {
+            font-size: 1.2rem;
+            margin-left: 2%;
+          }
+          i {
+            font-size: 20px;
+            color: var(--accent);
+          }
+        }
+      }
+
+      //modalité
+      .modalityContainer {
+        margin-top: 3%;
+        width: 80%;
+        font-size: 0.8rem;
+        color: grey;
+      }
+
+      // prix
+      .priceContainer {
+        margin-top: 3%;
+        .price {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    //bouton de fermeture
+    button {
+      position: absolute;
+      right: 10vh;
+      top: 10vh;
+      border: none;
+      background: none;
+      transition: transform 0.3s;
+    }
+    button:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
