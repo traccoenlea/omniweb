@@ -3,8 +3,10 @@
   width: fit-content;
   height: fit-content;
   background-color: var(--accent);
+  border: solid 5px black;
   display: flex;
   border-radius: 10px;
+  box-shadow: var(--primary) 5px 5px;
   .TitleHomepage {
     margin: 0 12px 12px 12px;
   }
