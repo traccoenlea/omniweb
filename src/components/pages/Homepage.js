@@ -47,7 +47,9 @@ const Homepage = () => {
                 </span>
               </h3>
             </div>
-            <Button title="En savoir plus" />
+            <div>
+              <Button title="En savoir plus" />
+            </div>
           </div>
           <img src={ImgHp} alt="" className="Illustration1" />
         </div>
@@ -100,22 +102,22 @@ const Homepage = () => {
         {/* Service fin */}
         <div className="bb"></div>
         {/* RS début */}
-        <div className="socials">
+        <div className="socials Test">
           <div className="TitleContainerAccent">
             <h2 className="Title">Titre n°4</h2>
           </div>
-          <div className="cards flex jcb">
-            <div className="card1 flex flexc jcc tac">
+          <div className=" flex jcb cards">
+            <div className=" flex flexc jcc tac card1">
               <i class="fa-brands fa-instagram"></i>
               {/* <LucideInstagram size={65} className="iconInstagram" /> */}
               <p>Instagram</p>
             </div>
-            <div className="card2 flex flexc jcc tac">
+            <div className=" flex flexc jcc tac card2">
               <i class="fa-brands fa-facebook-f"></i>
               {/* <LucideFacebook size={65} className="iconFacebook" /> */}
               <p>Facebook</p>
             </div>
-            <div className="card3 flex flexc jcc tac">
+            <div className=" flex flexc jcc tac card3">
               <i class="fa-brands fa-linkedin-in"></i>
               {/* <LucideLinkedin size={50} className="iconLinkedin" /> */}
               <p>LinkedIn</p>
