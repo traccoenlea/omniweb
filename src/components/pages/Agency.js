@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Chronologie } from "../components/Chronologie";
 
 export const Agency = () => {

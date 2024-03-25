@@ -1,100 +1,190 @@
-.TitleHomepageContainer {
-  margin: 7% 0 7% 0;
-  width: fit-content;
-  height: fit-content;
-  background-color: var(--accent);
-  border: solid 5px black;
+.PresentationContainer {
+  width: 100%;
   display: flex;
-  border-radius: 10px;
-  box-shadow: var(--primary) 5px 5px;
-  .TitleHomepage {
-    margin: 0 12px 12px 12px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  .PresentationPart1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+
+  .Illustration1 {
+    width: 35%;
+    height: 100%;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
 }
 
 //Section Atouts
+
 .AtoutsContainer {
-  margin: 5% 0 5% 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  @media screen and (max-width: 900px) {
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+  @media screen and (max-width: 720px) {
+    flex-flow: column nowrap;
+  }
 
-  .TitleAtoutsContainer {
-    margin: 0 0 7% 0;
-    width: fit-content;
-    height: fit-content;
-    background-color: var(--primary);
-    display: flex;
+  .Atout {
+    border: solid 5px var(--primary);
     border-radius: 10px;
+    width: 30%;
+    height: fit-content;
+    box-shadow: var(--primary) 5px 5px;
+    padding: 1% 2%;
+    transition: transform 500ms;
+    @media screen and (max-width: 900px) {
+      width: 48%;
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: 720px) {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 2% 6%;
+    }
 
-    .TitleAtouts {
-      font-family: "Etna";
-      font-size: 2.6rem;
-      color: var(--secondary);
-      margin: 0 12px 12px 12px;
+    .IconTitleContainer {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      i {
+        font-size: 2rem;
+        width: 20%;
+        margin-right: 5%;
+        @media screen and (max-width: 1025px) {
+          margin-right: 0%;
+          width: 30%;
+        }
+        @media screen and (max-width: 720px) {
+          margin-right: 0%;
+          width: 20%;
+        }
+      }
+    }
+
+    .TextAtoutContainer {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      p {
+        width: 75%;
+        font-size: 1.3rem;
+        margin-bottom: 5%;
+        @media screen and (max-width: 1300px) {
+          font-size: 1rem;
+          width: 70%;
+        }
+        @media screen and (max-width: 720px) {
+          font-size: 1rem;
+          width: 80%;
+        }
+      }
     }
   }
-}
-
-.atoutsListe {
-  width: 75%;
-  .iconsAtouts {
-    width: 2.6rem;
+  .Atout:hover {
+    transform: scale(1.08);
   }
 }
 
 // Section service
-.TitleServiceContainer {
-  margin: 0 10% 7% 0;
-  width: fit-content;
-  height: fit-content;
-  background-color: var(--accent);
+.ServiceContainer {
+  width: 100%;
   display: flex;
-  border-radius: 10px;
-  .TitleService {
-    font-family: "Etna";
-    font-size: 2.6rem;
-    margin: 0 12px 12px 12px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  .ServicePart1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+  .Illustration2 {
+    width: 35%;
+    height: 100%;
+    margin: 3% 0;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
 }
-.DescriptionService {
-  margin-bottom: 7%;
-  font-size: 1.6rem;
-  margin-right: 5%;
-}
 
+// Section RS
 .socials {
-  background: var(--accent);
-  height: 350px;
-  padding: 2% 12% 2% 12%;
-
-  h2 {
-    color: var(--secondary);
-    font-family: "Etna";
-    margin-bottom: 5%;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 60px;
   }
-  .cards {
-    height: 60%;
-    width: 100%;
 
-    // carte instagram
-    .card1 {
-      box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  .cards {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .card1,
+    .card2,
+    .card3 {
+      box-shadow: var(--primary) 5px 5px;
       height: 100%;
+      border: 5px solid var(--primary);
       width: 25%;
       background: var(--secondary);
-      border-radius: 20px;
+      border-radius: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: transform 1.2s;
+      transition: transform 500ms;
       font-size: 50px;
+      padding: 5%;
+      @media screen and (max-width: 1000px) {
+        height: 50%;
+        p {
+          display: none;
+        }
+      }
+      i {
+        font-size: 4rem;
+        @media screen and (max-width: 1000px) {
+          font-size: 2rem;
+        }
+      }
       p {
         margin-top: 5%;
-        font-size: 1.3rem;
+        font-size: 2rem;
       }
     }
     .card1:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
       background-image: radial-gradient(
         circle at 30% 107%,
         #fdf497 0%,
@@ -104,38 +194,12 @@
         #285aeb 90%
       );
       color: white;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-        rgba(0, 0, 0, 0.09) 0px 32px 16px;
-      transition: 500ms ease-in-out;
-      font-size: 60px;
-    }
 
-    // carte Facebook
-    .card2 {
-      box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-      height: 100%;
-      width: 25%;
-      background: var(--secondary);
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 1.2s;
-      font-size: 50px;
-      p {
-        margin-top: 5%;
-        font-size: 1.3rem;
-      }
+      transition: 500ms ease-in-out;
+      // font-size: 60px;
     }
     .card2:hover {
-      transform: scale(1.05);
-      // background-color: #0866ff;
+      transform: scale(1.02);
       background: rgb(40, 175, 252);
       background: linear-gradient(
         90deg,
@@ -143,47 +207,16 @@
         rgba(20, 115, 228, 1) 100%
       );
       color: white;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-        rgba(0, 0, 0, 0.09) 0px 32px 16px;
       transition: 500ms ease-in-out;
-      font-size: 60px;
-    }
-
-    // carte Linkedin
-    .card3 {
-      box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-      height: 100%;
-      width: 25%;
-      background: var(--secondary);
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 1.2s;
-      font-size: 50px;
-      p {
-        margin-top: 5%;
-        font-size: 1.3rem;
-      }
+      // font-size: 60px;
     }
     .card3:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
       background-color: #0073b2;
       color: white;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
       transition: 500ms ease-in-out;
-      font-size: 60px;
+      // font-size: 60px;
     }
   }
 }
