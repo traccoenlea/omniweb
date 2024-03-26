@@ -31,7 +31,7 @@ export const Services = () => {
       id: 2,
       title: "Pack 2",
       text1: "Pack 1",
-      // text2: "Carte de fidélité",
+      text2: "Flyer/Affiche",
       text3: "Flyer/Affiche",
       img: Pack2,
       className: "packCom mb5p mR0",
@@ -150,7 +150,6 @@ export const Services = () => {
                     <div className="offrePackContainer">
                       <p className="offrePack">{d.text1}</p>
                       <p className="offrePack">{d.text2}</p>
-                      <p className="offrePack">{d.text3}</p>
                     </div>
                     <button
                       className="buttonPack wideText"
@@ -177,7 +176,7 @@ export const Services = () => {
           </>
         </div>
         {/* partie web */}
-        <div className="Container">
+        <div className="Container mt60">
           {/* container de titre et texte de présentation */}
           <div className="presentationContainer">
             {/* Arrière plan titre */}
@@ -204,7 +203,6 @@ export const Services = () => {
                     <div className="offrePackContainer">
                       <p className="offrePack">{d.text1}</p>
                       <p className="offrePack">{d.text2}</p>
-                      <p className="offrePack">{d.text3}</p>
                     </div>
                     <button
                       className="buttonPack wideText"
