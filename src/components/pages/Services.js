@@ -170,7 +170,7 @@ export const Services = () => {
               pharetra diam.
             </p>
           </div>
-          {/* Container des packs communication */}
+          {/* Container des packs web */}
           <>
             <div className="containerPacks">
               {PacksWeb.map((d, i) => (
