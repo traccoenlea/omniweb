@@ -144,6 +144,13 @@ body {
   transform: scale(0.98);
 }
 
+.accentbtn {
+  background: var(--accent);
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
 .br {
   border-right: 3px solid var(--primary);
   margin: 0 10px;

@@ -57,7 +57,9 @@ export const Blog = () => {
 
   return (
     <div className="appContainer">
-      <h1>Notre blog</h1>
+      <div className="TitleContainerAccent mt60">
+        <h1 className="Title">Notre blog</h1>
+      </div>
       <div className="flex flexf jcb">
         {pagination.map((a, i) => (
           <div key={i} className="oneArticle">
