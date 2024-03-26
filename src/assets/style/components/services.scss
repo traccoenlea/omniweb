@@ -2,38 +2,63 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  margin: 60px 0;
 
   .Container {
     display: flex;
     flex-flow: column nowrap;
 
     .presentationContainer {
+      // margin-top: 60px;
       .titleServicesContainer {
-        margin: 7% 0 7% 0;
+        margin: 0 0 60px 0;
         width: fit-content;
         height: fit-content;
-        background-color: var(--accent);
+        border: solid 5px black;
         display: flex;
+        background-color: var(--accent);
+        align-items: center;
+        justify-content: center;
         border-radius: 10px;
+        box-shadow: var(--primary) 4px 4px;
 
         .titleServices {
-          margin: 0 12px 12px 12px;
+          margin: 8px;
+          margin-top: 0;
         }
       }
 
       .presentation {
         font-size: 1.6rem;
         margin-bottom: 5%;
+        @media screen and (max-width: 900px) {
+          font-size: 1.2rem;
+        }
       }
     }
 
+    //packs
     .containerPacks {
       display: flex;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       justify-content: space-around;
       align-items: flex-start;
 
-      .packCom {
+      @media screen and (max-width: 900px) {
+        align-items: center;
+        width: 99.2vw;
+        flex-flow: row nowrap;
+        overflow-x: auto;
+        margin-left: -15%;
+        height: 350px;
+        gap: 20px;
+      }
+      @media screen and (max-width: 720px) {
+        height: 300px;
+      }
+
+      .packCom,
+      .packPink {
         transition: transform 500ms;
         position: relative;
         display: flex;
@@ -41,43 +66,76 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         padding: 2% 3%;
-        height: 45vh;
-        background-color: var(--primary);
+        height: 350px;
+        color: var(--primary);
         border-radius: 25px;
-        color: var(--secondary);
-        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-          rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        border: solid 5px var(--primary);
+        box-shadow: 4px 4px var(--primary);
+        @media screen and (max-width: 1500px) {
+          height: 300px;
+        }
+        @media screen and (max-width: 1050px) {
+          height: 250px;
+        }
+        @media screen and (max-width: 900px) {
+          height: 300px;
+          margin-bottom: 0;
+          flex: 1 0 70%;
+        }
+        @media screen and (max-width: 720px) {
+          height: 200px;
+          flex: 1 0 70%;
+          border-radius: 15px;
+        }
 
         .leftPart {
           display: flex;
           flex-flow: column nowrap;
 
-          .titlePackContainer {
-            margin: 7% 0 7% 0;
+          .titlePackContainer1,
+          .titlePackContainer2 {
+            font-family: "Etna";
+            margin: 7% 0;
             width: fit-content;
             height: fit-content;
-            background-color: var(--secondary);
+            border: solid 5px black;
             display: flex;
             border-radius: 10px;
+            box-shadow: var(--primary) 4px 4px;
+            @media screen and (max-width: 1025px) {
+              border: solid 4px black;
+              border-radius: 10px;
+              box-shadow: var(--primary) 2px 2px;
+            }
 
             .titlePack {
-              margin: 0 12px 12px 12px;
-              font-family: "Etna";
-              font-size: 2.6rem;
+              margin: 2px 12px 10px 12px;
+              font-size: 2.2rem;
+              @media screen and (max-width: 1300px) {
+                font-size: 1.6rem;
+              }
             }
+          }
+          .titlePackContainer1 {
+            background-color: var(--accent);
+          }
+          .titlePackContainer2 {
+            background-color: var(--secondary);
           }
 
           .offrePackContainer {
             margin: 10% 0 10% 0;
             .offrePack {
               font-size: 1.2rem;
+              @media screen and (max-width: 720px) {
+                font-size: 1rem;
+              }
             }
           }
 
           .buttonPack {
             background: none;
-            color: white;
+            color: var(--primary);
             border: 0px solid;
             position: absolute;
             bottom: 10%;
@@ -103,88 +161,82 @@
           font-size: 16.5rem;
           display: flex;
           width: 50%;
+          height: 100%;
           flex-flow: row;
           justify-content: flex-end;
+          align-items: center;
+          @media screen and (max-width: 1300px) {
+            font-size: 12rem;
+          }
+
+          .ImgId {
+            height: 100%;
+            @media screen and (max-width: 1500px) {
+              height: 80%;
+            }
+            @media screen and (max-width: 1050px) {
+              height: 60%;
+            }
+            @media screen and (max-width: 720px) {
+              height: 60%;
+            }
+          }
         }
       }
-      .packCom:hover {
-        transform: scale(1.05);
+      .packCom {
+        background-color: var(--accent);
+        @media screen and (max-width: 900px) {
+          &:nth-child(3) {
+            background-color: var(--secondary);
+            .titlePackContainer2 {
+              background-color: var(--accent);
+            }
+          }
+        }
       }
       .packPink {
-        position: relative;
-        transition: transform 500ms;
-        display: flex;
-        flex: 1 0 40%;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 2% 3%;
-        height: 45vh;
         background-color: var(--secondary);
-        border-radius: 25px;
-        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-          rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
-        .leftPart {
-          display: flex;
-          flex-flow: column nowrap;
-
-          .titlePackContainer {
-            margin: 7% 0 7% 0;
-            width: fit-content;
-            height: fit-content;
+        @media screen and (max-width: 900px) {
+          &:nth-child(4) {
             background-color: var(--accent);
-            display: flex;
-            border-radius: 10px;
-
-            .titlePack {
-              margin: 0 12px 12px 12px;
-              font-family: "Etna";
-              font-size: 2.6rem;
+            .titlePackContainer1 {
+              background-color: var(--secondary);
             }
           }
-          .offrePackContainer {
-            margin: 10% 0 10% 0;
-            .offrePack {
-              font-size: 1.2rem;
-            }
-          }
-
-          .buttonPack {
-            background: none;
-            color: rgb(0, 0, 0);
-            border: 0px solid;
-            position: absolute;
-            bottom: 10%;
-            text-align: start;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 500ms;
-
-            i {
-              margin-right: 10px;
-              transform: rotate(-35deg);
-              transition: transform 500ms;
-            }
-          }
-          .buttonPack:hover {
-            transform: scale(1.1);
-            i {
-              transform: rotate(0deg);
-            }
-          }
-        }
-        .rightPart {
-          font-size: 16.5rem;
-          display: flex;
-          width: 50%;
-          flex-flow: row;
-          justify-content: flex-end;
         }
       }
+      .packCom:hover,
       .packPink:hover {
         transform: scale(1.05);
+        @media screen and (max-width: 900px) {
+          transform: scale(1.02);
+        }
       }
+    }
+    .containerPacks::-webkit-scrollbar {
+      display: none; /* Masquer la barre de défilement */
     }
   }
 }
+
+// @media screen and (max-width: 900px) {
+//   .containerPacks {
+//     display: flex;
+//     flex-flow: row nowrap;
+//     overflow-x: auto;
+//     scroll-snap-type: x mandatory;
+//     -webkit-overflow-scrolling: touch;
+//     // gap: 20px; /* Espacement entre les packs */
+//   }
+
+//   .containerPacks::-webkit-scrollbar {
+//     display: none; /* Masquer la barre de défilement */
+//   }
+
+//   .containerPacks > div {
+//     flex: 0 0 auto;
+//     scroll-snap-align: start;
+//     min-width: 100%; /* Largeur minimale d'un pack */
+//     margin-right: 20px;
+//   }
+// }
