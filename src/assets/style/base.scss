@@ -89,3 +89,27 @@ body {
   border-bottom: 3px solid var(--primary);
   margin: 20px 0;
 }
+
+.TitleContainerAccent,
+.TitleContainerSecondary {
+  margin: 0 0 60px 0;
+  width: fit-content;
+  height: fit-content;
+  border: solid 5px black;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: var(--primary) 4px 4px;
+  .Title {
+    margin: 0 12px 12px 12px;
+    @media screen and (max-width: 900px) {
+      margin: 8px;
+    }
+  }
+}
+.TitleContainerAccent {
+  background-color: var(--accent);
+}
+
+.TitleContainerSecondary {
+  background-color: var(--secondary);
+}
