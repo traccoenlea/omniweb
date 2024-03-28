@@ -95,3 +95,17 @@
     }
   }
 }
+
+@media screen and (max-width: 720px) {
+  .TitleDateContainer {
+    margin-top: -20px !important;
+  }
+
+  .stepContainer {
+    width: 100%;
+  }
+  .stepText {
+    width: 100% !important;
+    margin-bottom: 50px;
+  }
+}
