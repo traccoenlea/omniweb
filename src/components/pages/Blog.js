@@ -25,10 +25,12 @@ export const Blog = () => {
         <h1 className="Title">Notre blog</h1>
       </div>
 
+      {/* on met quand même qql chose si jamais y'a un bug d'articles pour pas avoir une big erreur */}
       {articles.length === 0 ? (
         <h2>Les articles arrivent...</h2>
       ) : (
-        <div className="flex flexf jcb">
+        // sinon on map sur les articles pour passer l'info au composant
+        <div className="flex flexf jcb allArticlesContainer">
           {articles.map((p, i) => (
             <div key={i} className="oneArticle">
               <ArticleContainer title={p.title} text={p.text} img={p.img} />

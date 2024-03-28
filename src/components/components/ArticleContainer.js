@@ -25,20 +25,20 @@ const ArticleContainer = ({ title, text, img }) => {
 
       {/* ici tout le container du text */}
       <div className="textContainer flex flexc jcb">
-        <div>
+        <div className="articleTitle">
           {/* si le titre = au titre écourté on met le titre */}
           {shortTitle === title ? (
-            <h3 className="articleTitle">{title}</h3>
+            <h3>{title}</h3>
           ) : (
             // sinon on met le titre écourté avec ...
-            <h3 className="articleTitle">{shortTitle}...</h3>
+            <h3>{shortTitle}...</h3>
           )}
         </div>
         <div>
           {/* ici le début de l'article avec pts de susp */}
           <p>{shortText}...</p>
         </div>
-        <div>
+        <div className="btnContainer">
           <button className="button accentbtn">Lire plus</button>
         </div>
       </div>
