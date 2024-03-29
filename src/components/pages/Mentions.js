@@ -3,7 +3,10 @@ import React from "react";
 export const Mentions = () => {
   return (
     <div className="appContainer mentionsContainer flex flexc jcc">
-      <h1>Mentions Légales</h1>
+      <div className="TitleContainerAccent">
+        <h1 className="Title">Mentions Légales</h1>
+      </div>
+
       <p className="paragraph">
         Jujubes chocolate cake brownie dessert toffee caramels bear claw oat
         cake caramels. Ice cream donut bear claw caramels caramels. Jelly bear
