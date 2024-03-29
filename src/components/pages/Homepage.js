@@ -1,7 +1,5 @@
 import React from "react";
 import Button from "../components/Button/Button";
-// import Atouts from "../components/Atouts";
-// import ImgAtout from "../../assets/img/imgAtouts.jpg";
 import ImgHp from "../../assets/img/hautparleur.png";
 import ImgHelp from "../../assets/img/help.png";
 

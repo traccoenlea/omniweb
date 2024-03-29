@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import ModalService from "../components/ModalService";
+import Pack1 from "../../assets/img/text1.png";
+import Pack2 from "../../assets/img/text2.png";
+import Pack3 from "../../assets/img/text3.png";
+import Pack4 from "../../assets/img/text4.png";
 
 export const Services = () => {
   //ouvrir la modal
@@ -16,7 +20,9 @@ export const Services = () => {
       title: "Pack 1",
       text1: "Identité visuelle",
       text2: "Carte de visite",
-      className: "packPink mr5p mb5p",
+      img: Pack1,
+      className: "packPink mr5p mb5p mlR12 mR0",
+      titleClassName: "titlePackContainer1",
       price: "2000€ HT",
       modality:
         "* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi.",
@@ -25,9 +31,11 @@ export const Services = () => {
       id: 2,
       title: "Pack 2",
       text1: "Pack 1",
-      text2: "Carte de fidélité",
+      text2: "Flyer/Affiche",
       text3: "Flyer/Affiche",
-      className: "packCom mb5p",
+      img: Pack2,
+      className: "packCom mb5p mR0",
+      titleClassName: "titlePackContainer2",
       price: "2000€ HT",
       modality:
         "* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi.",
@@ -37,7 +45,9 @@ export const Services = () => {
       title: "Pack 3",
       text1: "Pack 2",
       text2: "Plaquette",
-      className: "packCom mr5p mb5p",
+      img: Pack3,
+      className: "packCom mr5p mb5p mR0",
+      titleClassName: "titlePackContainer2",
       price: "2000€ HT",
       modality:
         "* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi.",
@@ -45,8 +55,10 @@ export const Services = () => {
     {
       id: 4,
       title: "Pack 4",
-      text1: "Pack sur-mesure",
-      className: "packPink mb5p",
+      text1: "Sur-mesure",
+      img: Pack4,
+      className: "packPink mb5p mrR12",
+      titleClassName: "titlePackContainer1",
       price: "2000€ HT",
       modality:
         "* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi.",
@@ -60,7 +72,9 @@ export const Services = () => {
       title: "Pack 1",
       text1: "Identité web",
       text2: "Carte de visite",
-      className: "packPink mr5p mb5p",
+      img: Pack1,
+      className: "packPink mr5p mb5p mlR12 mR0",
+      titleClassName: "titlePackContainer1",
       price: "2000€ HT",
       modality:
         "* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi.",
@@ -69,9 +83,11 @@ export const Services = () => {
       id: 2,
       title: "Pack 2",
       text1: "Pack 1",
-      text2: "Carte de web",
+      // text2: "Carte de web",
       text3: "Flyer/Affiche",
-      className: "packCom mb5p",
+      img: Pack2,
+      className: "packCom mb5p mR0",
+      titleClassName: "titlePackContainer2",
       price: "2000€ HT",
       modality:
         "* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi.",
@@ -79,10 +95,13 @@ export const Services = () => {
     {
       id: 3,
       title: "Pack 3",
-      text1: "Pack 2 Plaquette",
+      text1: "Pack 2",
       text2: "Plaquette",
-      className: "packCom mr5p mb5p",
+      img: Pack3,
+      className: "packCom mr5p mb5p mR0",
+      titleClassName: "titlePackContainer2",
       price: "2000€ HT",
+      src: "",
       modality:
         "* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi.",
     },
@@ -90,7 +109,9 @@ export const Services = () => {
       id: 4,
       title: "Pack 4",
       text1: "Pack sur-mesure",
-      className: "packPink mb5p",
+      img: Pack4,
+      className: "packPink mb5p mrR12",
+      titleClassName: "titlePackContainer1",
       price: "2000€ HT",
       modality:
         "* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi.",
@@ -123,13 +144,12 @@ export const Services = () => {
                 <div key={i} className={d.className}>
                   {/* partie gauche du pack */}
                   <div className="leftPart">
-                    <div className="titlePackContainer">
+                    <div className={d.titleClassName}>
                       <h2 className="titlePack">{d.title}</h2>
                     </div>
                     <div className="offrePackContainer">
                       <p className="offrePack">{d.text1}</p>
                       <p className="offrePack">{d.text2}</p>
-                      <p className="offrePack">{d.text3}</p>
                     </div>
                     <button
                       className="buttonPack wideText"
@@ -140,7 +160,7 @@ export const Services = () => {
                   </div>
                   {/* partie droite du pack */}
                   <div className="rightPart">
-                    <p className="idPack wideText">{d.id}</p>
+                    <img className="ImgId" src={d.img} alt="numéro du pack" />
                   </div>
                 </div>
               ))}
@@ -156,7 +176,7 @@ export const Services = () => {
           </>
         </div>
         {/* partie web */}
-        <div className="Container">
+        <div className="Container mt60">
           {/* container de titre et texte de présentation */}
           <div className="presentationContainer">
             {/* Arrière plan titre */}
@@ -170,20 +190,19 @@ export const Services = () => {
               pharetra diam.
             </p>
           </div>
-          {/* Container des packs communication */}
+          {/* Container des packs web */}
           <>
             <div className="containerPacks">
               {PacksWeb.map((d, i) => (
                 <div key={i} className={d.className}>
                   {/* partie gauche du pack */}
                   <div className="leftPart">
-                    <div className="titlePackContainer">
+                    <div className={d.titleClassName}>
                       <h2 className="titlePack">{d.title}</h2>
                     </div>
                     <div className="offrePackContainer">
                       <p className="offrePack">{d.text1}</p>
                       <p className="offrePack">{d.text2}</p>
-                      <p className="offrePack">{d.text3}</p>
                     </div>
                     <button
                       className="buttonPack wideText"
@@ -194,7 +213,7 @@ export const Services = () => {
                   </div>
                   {/* partie droite du pack */}
                   <div className="rightPart">
-                    <p className="idPack wideText">{d.id}</p>
+                    <img className="ImgId" src={d.img} alt="numéro du pack" />
                   </div>
                 </div>
               ))}
