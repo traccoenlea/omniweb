@@ -182,6 +182,17 @@
   padding-bottom: 10px;
 }
 
+.hfc {
+  height: fit-content;
+}
+
+.mt60 {
+  margin-top: 60px;
+}
+.mb60 {
+  margin-bottom: 60px;
+}
+
 .mlR12 {
   @media screen and (max-width: 900px) {
     margin-left: 12%;

@@ -1,37 +1,113 @@
-.formContainer {
-  width: 50%;
-
-  .error {
-    text-align: center;
-    font-size: 0.75rem;
-    font-style: italic;
-    color: var(--accent);
-    margin: 5px 0;
+.contactContainer {
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
   }
 
-  .inputContainer {
-    width: 100%;
+  .contactPresentation {
+    p {
+      width: 80%;
+    }
+    @media screen and (max-width: 900px) {
+      margin-bottom: 30px;
+    }
+  }
 
-    .smallInput,
-    .bigInput {
-      border: none;
-      border-bottom: 2px solid black;
-      background: rgba($color: #afafaf, $alpha: 0.05);
-      &::placeholder {
-        color: var(--primary);
-        font-family: "Agrandir";
+  .formContainer {
+    width: 50%;
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .error {
+      text-align: center;
+      font-size: 0.75rem;
+      font-style: italic;
+      color: var(--accent);
+      margin: 8px 0 0 0;
+    }
+
+    .inputContainer {
+      width: 100%;
+
+      .smallInput,
+      .bigInput {
+        padding: 0 5%;
+        height: 40px;
+        border: 4px solid black;
+        border-radius: 8px;
+        background: rgba($color: #afafaf, $alpha: 0.05);
+        box-shadow: 3px 3px var(--primary);
+        text-decoration-color: rgba(0, 0, 0, 0);
+        transition: text-decoration-color 500ms;
+        transition: box-shadow 300ms;
+        outline: none;
+        &::placeholder {
+          color: var(--primary);
+          font-family: "Agrandir";
+        }
+      }
+      .smallInput:focus,
+      .bigInput:focus {
+        text-decoration: underline;
+        text-decoration-color: black;
+        box-shadow: 5px 5px black;
+      }
+      .smallInput:hover,
+      .bigInput:hover {
+        box-shadow: 5px 5px black;
+      }
+      .smallInput {
+        width: 95%;
+      }
+
+      .bigInput {
+        width: 100%;
+      }
+
+      .textareaInput {
+        height: 150px;
+        padding-top: 3%;
       }
     }
-    .smallInput {
-      width: 85%;
-    }
-
-    .bigInput {
+    .consentContainer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
       width: 100%;
+
+      .consent {
+        font-size: 0.8rem;
+        width: 95%;
+        margin-left: 10px;
+      }
     }
 
-    .textareaInput {
-      height: 200px;
+    .buttonFormContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .buttonForm {
+        border: 4px solid black;
+        width: 60%;
+        height: 40px;
+        background-color: var(--secondary);
+        border-radius: 5px;
+        font-family: "Etna";
+        font-size: 15px;
+        margin: 30px 0 0 0;
+        padding-bottom: 5px;
+        // transition: transform 1s;
+        transition: background-color 500ms;
+      }
+      .buttonForm:active {
+        transform: scale(0.95);
+      }
+      .buttonForm:hover {
+        background-color: var(--accent);
+      }
     }
   }
 }
