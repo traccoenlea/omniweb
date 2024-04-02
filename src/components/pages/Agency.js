@@ -5,8 +5,8 @@ export const Agency = () => {
   return (
     <div className="appContainer">
       <div className="agencyContainer">
-        <div className="TitleAgencyContainer">
-          <h1 className="TitleAgency">L'agence OmniWeb</h1>
+        <div className="TitleContainerAccent mt60">
+          <h1 className="Title">Notre agence</h1>
         </div>
 
         <Chronologie />

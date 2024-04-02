@@ -15,9 +15,8 @@ export const Chronologie = () => {
 
   useEffect(() => {
     async function getWidth() {
-      console.log("on pass dans getwidth");
       const width = window.innerWidth;
-      if (width <= 720) {
+      if (width <= 900) {
         setMobile(true);
       } else {
         setMobile(false);

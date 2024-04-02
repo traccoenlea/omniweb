@@ -1,16 +1,3 @@
-.TitleAgencyContainer {
-  margin: 7% 0 7% 0;
-  width: fit-content;
-  height: fit-content;
-  background-color: var(--accent);
-  display: flex;
-  border-radius: 10px;
-
-  .TitleAgency {
-    margin: 0 12px 18px 12px;
-  }
-}
-
 .agencyContainer {
   margin: 50px 0;
 
@@ -96,7 +83,7 @@
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 900px) {
   .TitleDateContainer {
     margin-top: -20px !important;
   }
