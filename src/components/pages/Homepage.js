@@ -107,17 +107,17 @@ const Homepage = () => {
           </div>
           <div className="cards flex jcb">
             <div className="card1 flex flexc jcc tac">
-              <i class="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-instagram"></i>
               {/* <LucideInstagram size={65} className="iconInstagram" /> */}
               <p>Instagram</p>
             </div>
             <div className="card2 flex flexc jcc tac">
-              <i class="fa-brands fa-facebook-f"></i>
+              <i className="fa-brands fa-facebook-f"></i>
               {/* <LucideFacebook size={65} className="iconFacebook" /> */}
               <p>Facebook</p>
             </div>
             <div className="card3 flex flexc jcc tac">
-              <i class="fa-brands fa-linkedin-in"></i>
+              <i className="fa-brands fa-linkedin-in"></i>
               {/* <LucideLinkedin size={50} className="iconLinkedin" /> */}
               <p>LinkedIn</p>
             </div>

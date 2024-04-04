@@ -5,6 +5,19 @@
     flex-flow: column nowrap;
   }
 
+  .contactData {
+    width: 100%;
+
+    div {
+      margin-bottom: 20px;
+    }
+
+    i {
+      font-size: 1.5rem;
+      margin-right: 20px;
+    }
+  }
+
   .contactPresentation {
     p {
       width: 80%;

@@ -18,19 +18,19 @@ function ModalService({ isOpen, dataWeb, handleCloseModal }) {
               <div className="detailContainer">
                 {dataWeb.text1 && (
                   <div className="detail">
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i className="fa-solid fa-circle-check"></i>
                     <p>{dataWeb.text1}</p>
                   </div>
                 )}
                 {dataWeb.text2 && (
                   <div className="detail">
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i className="fa-solid fa-circle-check"></i>
                     <p>{dataWeb.text2}</p>
                   </div>
                 )}
                 {dataWeb.text3 && (
                   <div className="detail">
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i className="fa-solid fa-circle-check"></i>
                     <p>{dataWeb.text3}</p>
                   </div>
                 )}

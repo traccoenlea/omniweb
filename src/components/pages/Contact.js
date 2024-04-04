@@ -3,6 +3,7 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { addContactToDb, sendingEmail } from "../../apis/contact";
+import { NavLink } from "react-router-dom";
 
 export const Contact = () => {
   const yupSchema = yup.object({
@@ -95,10 +96,16 @@ export const Contact = () => {
             <h1 className="Title">Contactez-nous</h1>
           </div>
 
-          <p>
-            Lorem ipsum machin chouette c'est vraiment{" "}
-            <span className="color">trop cool</span>
-          </p>
+          <div className="contactData">
+            <div className="flex jcfs">
+              <i className="fa-solid fa-phone flex flexc jcc"></i>
+              <h3 className="color "> 07 49 41 48 42</h3>
+            </div>
+            <div className="flex jcfs">
+              <i className="fa-solid fa-envelope flex flexc jcc"></i>
+              <h3 className="color "> contact@omnistos.fr</h3>
+            </div>
+          </div>
         </div>
         <div className="bb"></div>
         <form onSubmit={submit} className="formContainer jcc aic">
@@ -168,13 +175,17 @@ export const Contact = () => {
             <div className="consent">
               <label htmlFor="consent" className="flex flexc jcfe ">
                 J'accepte que mes informations soient enregistrées afin d'être
-                recontacté(e) par l'entreprise Omni Web .
+                recontacté(e) par l'entreprise Omnistos.
               </label>
+
               {errors?.consent && (
                 <p className="error">{errors.consent.message}</p>
               )}
             </div>
           </div>
+          <NavLink to="/cgu" target="__blank" rel="noreferrer">
+            Lire les Conditions Générales d'Utilisation (CGU)
+          </NavLink>
           <div className="buttonFormContainer">
             <button className="buttonForm">Envoyer</button>
           </div>
