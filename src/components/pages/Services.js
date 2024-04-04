@@ -128,13 +128,17 @@ export const Services = () => {
           <div className="presentationContainer">
             {/* Arrière plan titre */}
             <div className="titleServicesContainer">
-              <h1 className="titleServices">Nos services</h1>
+              <h1 className="titleServices">Communication</h1>
             </div>
             <p className="presentation">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue
-              lacus viverra vitae congue eu consequat ac. Odio ut sem nulla
-              pharetra diam.
+              <span className="color">"Communication is key" </span>, c'est une
+              phrase que vous avez dû souvent entendre. Elle prend effet, non
+              seulement, dans votre communication interne (au sein même de votre
+              structure) ou externe (pour vos clients, prospects, partenaires,
+              fournisseurs) mais aussi lors de la création de communications
+              print ou digitales. <br />
+              (On en entend aussi parler lors de communication verbale la
+              plupart du temps ! )
             </p>
           </div>
           {/* Container des packs communication */}
@@ -181,13 +185,14 @@ export const Services = () => {
           <div className="presentationContainer">
             {/* Arrière plan titre */}
             <div className="titleServicesContainer">
-              <h1 className="titleServices">Nos services</h1>
+              <h1 className="titleServices">Web</h1>
             </div>
             <p className="presentation">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue
-              lacus viverra vitae congue eu consequat ac. Odio ut sem nulla
-              pharetra diam.
+              <span className="color">"Votre site parle pour vous" </span>, chez
+              Omnistos, nous vous livrons un site qui vous ressemble et qui fera
+              parler de vous, mais qui pourra aussi parler pour vous. Votre site
+              web, c'est votre image sur le web, pour vous retrouver, comprendre
+              ce que vous proposer et plaire à vos futurs prospects.
             </p>
           </div>
           {/* Container des packs web */}
