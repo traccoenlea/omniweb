@@ -30,7 +30,7 @@ export const Router = createBrowserRouter([
       },
       {
         element: <Services />,
-        path: "/offre",
+        path: "/services",
       },
       {
         element: <Agency />,

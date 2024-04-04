@@ -9,19 +9,19 @@ const Homepage = () => {
     {
       id: 1,
       title: "Atout n°1",
-      text: "bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla blabla bla blabla bla",
-      icon: "fa-regular fa-clock",
+      text: "Vous êtes différent des autres, c'est pour cela que nous nous engageons à faire du sur-mesure pour chaque client.",
+      icon: "fa-solid fa-sliders",
     },
     {
       id: 2,
       title: "Atout n°2",
-      text: "bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla blabla bla blabla bla",
+      text: "Nous travaillons ensemble pour réussir à transformer votre image en identité graphique pour votre communication.",
       icon: "fa-regular fa-handshake",
     },
     {
       id: 3,
       title: "Atout n°3",
-      text: "bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla blabla bla blabla bla",
+      text: "Nous sommes une équipe disponible pour échanger avec vous des prémices à la réalisation de toute votre communication.",
       icon: "fa-regular fa-comments",
     },
   ];
@@ -35,17 +35,17 @@ const Homepage = () => {
           <div className="PresentationPart1">
             <div>
               <div className="TitleContainerAccent">
-                <h1 className="Title">Titre n°1</h1>
+                <h1 className="Title">Omnistos, kézako ?</h1>
               </div>
               <h3 className="maxw90 mb5 H3Presentation">
-                Lorem ipsum dolor sit amet, incididunt aliqua, incididunt
-                aliqua. Quis nostrud{" "}
-                <span className="color">
-                  exercitation ullamco laboris nisi ut
-                </span>
+                Nous sommes une{" "}
+                <span className="color">agence de communication </span> qui vous
+                accompagne et vous conseille lors de la création de vos{" "}
+                <span className="color">supports de communication</span> (print,
+                digital et site web).
               </h3>
             </div>
-            <Button title="En savoir plus" />
+            <Button title="Contactez-nous" link="/contact" />
           </div>
           <img src={ImgHp} alt="" className="Illustration1" />
         </div>
@@ -54,7 +54,7 @@ const Homepage = () => {
 
         <div className="mt60">
           <div className="TitleContainerAccent">
-            <h2 className="Title">Titre n°2</h2>
+            <h2 className="Title">Nos atouts</h2>
           </div>
           {/* liste atouts */}
           <div className="AtoutsContainer">
@@ -81,16 +81,19 @@ const Homepage = () => {
           <div className="ServicePart1">
             <div>
               <div className="TitleContainerAccent">
-                <h1 className="Title">Titre n°3</h1>
+                <h1 className="Title">Nos services</h1>
               </div>
               <h3 className="maxw80 mb5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit{" "}
-                <span className="color">
-                  exercitation ullamco laboris nisi ut
-                </span>
+                Nous vous proposons de créer vos supports de communication{" "}
+                <span className="color">print </span>
+                (cartes de visite, affiches, flyers, plaquettes...),{" "}
+                <span className="color">digitaux </span>
+                (posts et bannières réseaux sociaux...) et votre{" "}
+                <span className="color">site web </span>
+                (vitrine, e-commerce, blog, sur-mesure).
               </h3>
             </div>
-            <Button title="En savoir plus" />
+            <Button title="En savoir plus" link="/services" />
           </div>
           <img src={ImgHelp} alt="" className="Illustration2" />
         </div>
@@ -100,7 +103,7 @@ const Homepage = () => {
         {/* RS début */}
         <div className="socials">
           <div className="TitleContainerAccent">
-            <h2 className="Title">Titre n°4</h2>
+            <h2 className="Title">Nos réseaux</h2>
           </div>
           <div className="cards flex jcb">
             <div className="card1 flex flexc jcc tac">

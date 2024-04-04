@@ -1,11 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Button = ({ title }) => {
+const Button = ({ title, link }) => {
+  console.log(link);
   return (
-    <div className="button flex jce">
+    <NavLink className="button flex jce" to={link}>
       <div className=" flex flexc jcc tac">{title}</div>
       <i className="fa-solid fa-arrow-right flex flexc jcc"></i>
-    </div>
+    </NavLink>
   );
 };
 

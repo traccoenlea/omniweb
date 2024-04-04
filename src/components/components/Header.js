@@ -17,12 +17,12 @@ export const Header = () => {
     <>
       <div className="appContainer header flex jcb">
         <NavLink
-          to="/offre"
+          to="/services"
           className="flex flexc jcc headerLink"
           activeClassName="active"
           onClick={handleNavLinkClick}
         >
-          Nos offres
+          Nos services
         </NavLink>
         <NavLink
           to="/projets"
