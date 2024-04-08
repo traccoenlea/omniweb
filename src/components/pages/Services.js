@@ -21,7 +21,7 @@ export const Services = () => {
       text1: "Identité visuelle",
       text2: "Carte de visite",
       img: Pack1,
-      className: "packPink mr5p mb5p mlR12 mR0",
+      className: "packContainer packPink mr5p mb5p mlR12 mR0",
       titleClassName: "titlePackContainer1",
       price: "2000€ HT",
       modality:
@@ -34,7 +34,7 @@ export const Services = () => {
       text2: "Flyer/Affiche",
       text3: "Flyer/Affiche",
       img: Pack2,
-      className: "packCom mb5p mR0",
+      className: "packContainer packCom mb5p mR0",
       titleClassName: "titlePackContainer2",
       price: "2000€ HT",
       modality:
@@ -46,7 +46,7 @@ export const Services = () => {
       text1: "Pack 2",
       text2: "Plaquette",
       img: Pack3,
-      className: "packCom mr5p mb5p mR0",
+      className: "packContainer packCom mr5p mb5p mR0",
       titleClassName: "titlePackContainer2",
       price: "2000€ HT",
       modality:
@@ -57,7 +57,7 @@ export const Services = () => {
       title: "Pack 4",
       text1: "Sur-mesure",
       img: Pack4,
-      className: "packPink mb5p mrR12",
+      className: "packContainer packPink mb5p mrR12",
       titleClassName: "titlePackContainer1",
       price: "2000€ HT",
       modality:
@@ -73,7 +73,7 @@ export const Services = () => {
       text1: "Identité web",
       text2: "Carte de visite",
       img: Pack1,
-      className: "packPink mr5p mb5p mlR12 mR0",
+      className: "packContainer packPink mr5p mb5p mlR12 mR0",
       titleClassName: "titlePackContainer1",
       price: "2000€ HT",
       modality:
@@ -86,7 +86,7 @@ export const Services = () => {
       // text2: "Carte de web",
       text3: "Flyer/Affiche",
       img: Pack2,
-      className: "packCom mb5p mR0",
+      className: "packContainer packCom mb5p mR0",
       titleClassName: "titlePackContainer2",
       price: "2000€ HT",
       modality:
@@ -98,7 +98,7 @@ export const Services = () => {
       text1: "Pack 2",
       text2: "Plaquette",
       img: Pack3,
-      className: "packCom mr5p mb5p mR0",
+      className: "packContainer packCom mr5p mb5p mR0",
       titleClassName: "titlePackContainer2",
       price: "2000€ HT",
       src: "",
@@ -110,7 +110,7 @@ export const Services = () => {
       title: "Pack 4",
       text1: "Pack sur-mesure",
       img: Pack4,
-      className: "packPink mb5p mrR12",
+      className: "packContainer packPink mb5p mrR12",
       titleClassName: "titlePackContainer1",
       price: "2000€ HT",
       modality:

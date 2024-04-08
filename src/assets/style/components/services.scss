@@ -55,6 +55,14 @@
       }
       @media screen and (max-width: 720px) {
         height: 300px;
+        .packContainer {
+          &:first-of-type {
+            margin-left: 210%;
+          }
+          &:last-of-type {
+            background: #000;
+          }
+        }
       }
 
       .packCom,
