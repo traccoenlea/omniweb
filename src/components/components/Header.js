@@ -85,7 +85,7 @@ export const Header = () => {
                         activeClassName="active"
                         onClick={handleNavLinkClick}
                       >
-                        Nos offres
+                        Nos services
                       </NavLink>
                     </li>
                     <li>
