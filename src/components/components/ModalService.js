@@ -1,5 +1,6 @@
 import React from "react";
 import Cross from "../../assets/img/cross.png";
+import { NavLink } from "react-router-dom";
 
 function ModalService({ isOpen, dataWeb, handleCloseModal }) {
   return (
@@ -39,10 +40,19 @@ function ModalService({ isOpen, dataWeb, handleCloseModal }) {
               <div className="priceContainer">
                 <h3 className="price">{dataWeb.price}</h3>
               </div>
-              {/* les modalités */}
-              <div className="modalityContainer">
-                <p className="modality">{dataWeb.modality}</p>
+              {/* CAT vers contact */}
+              <div>
+                <p>
+                  Vous êtes intéréssé ?{" "}
+                  <NavLink to="/contact" className="servicesNavlink">
+                    Contactez-nous
+                  </NavLink>
+                </p>
               </div>
+              {/* les modalités */}
+              {/* <div className="modalityContainer">
+                <p className="modality">{dataWeb.modality}</p>
+              </div> */}
             </div>
             {/* bouton de fermeture */}
             <button onClick={handleCloseModal}>

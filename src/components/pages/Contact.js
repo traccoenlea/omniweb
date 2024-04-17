@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -6,6 +6,11 @@ import { addContactToDb, sendingEmail } from "../../apis/contact";
 import { NavLink } from "react-router-dom";
 
 export const Contact = () => {
+  //scroll en haut de page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const yupSchema = yup.object({
     name: yup.string().required("Ce champ doit être renseigné"),
     surname: yup.string().required("Ce champ doit être renseigné"),

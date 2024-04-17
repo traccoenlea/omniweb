@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export const CGU = () => {
+  //scroll en haut de page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="appContainer cguContainer flex flexc jcc">
+      <ScrollToTopButton />
       <h1>Conditions Générales d'Utilisation</h1>
       <p className="paragraph">
         Jujubes chocolate cake brownie dessert toffee caramels bear claw oat

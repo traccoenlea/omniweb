@@ -1,0 +1,52 @@
+.wtgContainer {
+  padding: 60px 0;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 900px) {
+    height: fit-content;
+  }
+  .wtgText {
+    font-family: "Etna";
+    font-size: 2rem;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 900px) {
+      font-size: 1.2rem;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    p {
+      margin-bottom: 2vh;
+      text-align: center;
+    }
+    .wtgBackHome {
+      margin-top: 5%;
+      font-family: "Agrandir";
+      font-size: 1.5rem;
+      @media screen and (max-width: 900px) {
+        font-size: 1.2rem;
+      }
+      .wtgNavLink {
+        color: var(--accent);
+      }
+    }
+  }
+  .wtgImg {
+    width: 20%;
+    height: auto;
+    margin-bottom: 5%;
+    @media screen and (max-width: 900px) {
+      width: 60%;
+    }
+    @media screen and (max-width: 720px) {
+      width: 80%;
+    }
+  }
+}

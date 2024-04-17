@@ -17,17 +17,17 @@ h1,
 h2 {
   color: var(--primary);
   font-family: "Etna";
-  font-size: 2.6rem;
+  font-size: 2rem;
   @media screen and (max-width: 1000px) {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }
 
 h3 {
   color: var(--primary);
-  font-size: 2rem;
+  font-size: 1.2rem;
   @media screen and (max-width: 1000px) {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 }
 
@@ -66,30 +66,6 @@ body {
   max-height: 100vh;
 }
 
-.TitleContainerAccent,
-.TitleContainerSecondary {
-  margin: 0 0 60px 0;
-  width: fit-content;
-  height: fit-content;
-  border: solid 5px black;
-  display: flex;
-  border-radius: 10px;
-  box-shadow: var(--primary) 4px 4px;
-  .Title {
-    margin: 0 12px 12px 12px;
-    @media screen and (max-width: 900px) {
-      margin: 8px;
-    }
-  }
-}
-.TitleContainerAccent {
-  background-color: var(--accent);
-}
-
-.TitleContainerSecondary {
-  background-color: var(--secondary);
-}
-
 .TitleAtoutContainer {
   font-family: "Etna";
   background-color: var(--accent);
@@ -105,7 +81,7 @@ body {
     border-radius: 5px;
     box-shadow: var(--primary) 2px 2px;
   }
-  .Title {
+  .TitleAtout {
     margin: 0 12px 5px 12px;
     font-size: 2.2rem;
     @media screen and (max-width: 1300px) {
@@ -121,7 +97,7 @@ body {
 .button {
   font-size: 1.2rem;
   margin: 7% 0 0 0;
-  padding: 12px;
+  padding: 8px;
   transition: transform 500ms;
   width: 250px;
   height: fit-content;
@@ -173,7 +149,7 @@ body {
   .Title {
     margin: 0 12px 12px 12px;
     @media screen and (max-width: 900px) {
-      margin: 8px;
+      margin: 8px 8px 4px 8px;
     }
   }
 }

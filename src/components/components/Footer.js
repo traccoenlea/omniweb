@@ -23,7 +23,12 @@ export const Footer = () => {
           <h3>Liens utiles</h3>
           <div className="links flex flexc jcb">
             <NavLink to="/contact">Contact</NavLink>
-            <NavLink to="/recrutement">Rejoignez-nous</NavLink>
+            <NavLink
+              // to="/recrutement"
+              to="/attente"
+            >
+              Rejoignez-nous
+            </NavLink>
             <NavLink to="/mentionslegales">Mentions légales</NavLink>
             <NavLink to="/cgu">CGU</NavLink>
           </div>
