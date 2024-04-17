@@ -167,7 +167,9 @@ export const Contact = () => {
               className="bigInput textareaInput mt30"
             />
           </div>
+
           {errors?.message && <p className="error">{errors.message.message}</p>}
+
           <div className="flex jce consentContainer mt20">
             <div className="flex flexc mb5">
               <input
@@ -177,20 +179,24 @@ export const Contact = () => {
                 {...register("consent")}
               />
             </div>
+
             <div className="consent">
-              <label htmlFor="consent" className="flex flexc jcfe ">
-                J'accepte que mes informations soient enregistrées afin d'être
-                recontacté(e) par l'entreprise Omnistos.
-              </label>
+              <label htmlFor="consent">J'ai lu et j'accepte les </label>
+              <NavLink
+                to="/cgu"
+                target="__blank"
+                rel="noreferrer"
+                className="cguLinks"
+              >
+                Conditions Générales d'Utilisation (CGU)
+              </NavLink>
 
               {errors?.consent && (
                 <p className="error">{errors.consent.message}</p>
               )}
             </div>
           </div>
-          <NavLink to="/cgu" target="__blank" rel="noreferrer">
-            Lire les Conditions Générales d'Utilisation (CGU)
-          </NavLink>
+
           <div className="buttonFormContainer">
             <button className="buttonForm">Envoyer</button>
           </div>

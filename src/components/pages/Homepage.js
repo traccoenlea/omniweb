@@ -43,7 +43,7 @@ const Homepage = () => {
           <div className="PresentationPart1">
             <div>
               <div className="TitleContainerAccent">
-                <h1 className="Title">Omnistos, kézako ?</h1>
+                <h1 className="Title">Notre agence</h1>
               </div>
               <h3 className="maxw90 mb5 H3Presentation">
                 Nous sommes une{" "}

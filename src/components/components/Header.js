@@ -42,7 +42,7 @@ export const Header = () => {
           activeClassName="active"
           onClick={handleNavLinkClick}
         >
-          L'agence
+          Notre agence
         </NavLink>
         <NavLink
           // to="/blog"
@@ -108,7 +108,7 @@ export const Header = () => {
                         activeClassName="active"
                         onClick={handleNavLinkClick}
                       >
-                        L'agence
+                        Notre agence
                       </NavLink>
                     </li>
                     <li>
