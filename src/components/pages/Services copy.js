@@ -5,9 +5,6 @@ import Pack2 from "../../assets/img/text2.png";
 import Pack3 from "../../assets/img/text3.png";
 import Pack4 from "../../assets/img/text4.png";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-import { Swiper, SwiperSlide } from "swiper/react";
-import ServicesDesktop from "./ServicesDesktop";
-import ServicesMobile from "./ServicesMobile";
 
 export const Services = () => {
   //scroll en haut de page
@@ -16,8 +13,11 @@ export const Services = () => {
   }, []);
 
   //ouvrir la modal
+  const [openModalIndex, setOpenModalIndex] = useState(null);
 
-  const width = window.innerWidth;
+  const handleClickModal = (index) => {
+    setOpenModalIndex(index);
+  };
 
   // tableau offres communication
   let PacksCommunication = [
@@ -149,14 +149,42 @@ export const Services = () => {
             </p>
           </div>
           {/* Container des packs communication */}
-
-          {width <= 900 ? (
-            <ServicesMobile packs={PacksCommunication} />
-          ) : (
-            <div>
-              <ServicesDesktop packs={PacksCommunication} />
+          <>
+            <div className="containerPacks">
+              {PacksCommunication.map((d, i) => (
+                <div key={i} className={d.className}>
+                  {/* partie gauche du pack */}
+                  <div className="leftPart">
+                    <div className={d.titleClassName}>
+                      <h2 className="titlePack">{d.title}</h2>
+                    </div>
+                    <div className="offrePackContainer">
+                      <p className="offrePack">{d.text1}</p>
+                      <p className="offrePack">{d.text2}</p>
+                    </div>
+                    <button
+                      className="buttonPack wideText"
+                      onClick={() => handleClickModal(i)}
+                    >
+                      <i className="fa-solid fa-arrow-right"></i>Voir plus
+                    </button>
+                  </div>
+                  {/* partie droite du pack */}
+                  <div className="rightPart">
+                    <img className="ImgId" src={d.img} alt="numéro du pack" />
+                  </div>
+                </div>
+              ))}
             </div>
-          )}
+            {openModalIndex !== null && (
+              <ModalService
+                key={openModalIndex}
+                isOpen={openModalIndex !== null}
+                dataWeb={PacksCommunication[openModalIndex]}
+                handleCloseModal={() => setOpenModalIndex(null)}
+              />
+            )}
+          </>
         </div>
         {/* partie web */}
         <div className="Container mt60">
@@ -175,49 +203,41 @@ export const Services = () => {
             </p>
           </div>
           {/* Container des packs web */}
-
-          {width <= 900 ? (
-            <ServicesMobile packs={PacksWeb} />
-          ) : (
-            <div>
-              <ServicesDesktop packs={PacksWeb} />
-            </div>
-          )}
           <>
-            {/* <div className="containerPacks"> */}
-            {/* {PacksWeb.map((d, i) => (
-              <div key={i} className={d.className}>
-                {/* partie gauche du pack */}
-            {/* <div className="leftPart">
-                  <div className={d.titleClassName}>
-                    <h2 className="titlePack">{d.title}</h2>
+            <div className="containerPacks">
+              {PacksWeb.map((d, i) => (
+                <div key={i} className={d.className}>
+                  {/* partie gauche du pack */}
+                  <div className="leftPart">
+                    <div className={d.titleClassName}>
+                      <h2 className="titlePack">{d.title}</h2>
+                    </div>
+                    <div className="offrePackContainer">
+                      <p className="offrePack">{d.text1}</p>
+                      <p className="offrePack">{d.text2}</p>
+                    </div>
+                    <button
+                      className="buttonPack wideText"
+                      onClick={() => handleClickModal(i)}
+                    >
+                      <i className="fa-solid fa-arrow-right"></i>Voir plus
+                    </button>
                   </div>
-                  <div className="offrePackContainer">
-                    <p className="offrePack">{d.text1}</p>
-                    <p className="offrePack">{d.text2}</p>
+                  {/* partie droite du pack */}
+                  <div className="rightPart">
+                    <img className="ImgId" src={d.img} alt="numéro du pack" />
                   </div>
-                  <button
-                    className="buttonPack wideText"
-                    onClick={() => handleClickModal(i)}
-                  >
-                    <i className="fa-solid fa-arrow-right"></i>Voir plus
-                  </button>
                 </div>
-                {/* partie droite du pack */}
-            {/* <div className="rightPart">
-                  <img className="ImgId" src={d.img} alt="numéro du pack" />
-                </div>
-              </div>  */}
-            {/* ))} */}
-            {/* </div> */}
-            {/* {openModalIndex !== null && (
+              ))}
+            </div>
+            {openModalIndex !== null && (
               <ModalService
                 key={openModalIndex}
                 isOpen={openModalIndex !== null}
                 dataWeb={PacksWeb[openModalIndex]}
                 handleCloseModal={() => setOpenModalIndex(null)}
               />
-            )} */}
+            )}
           </>
         </div>
       </div>
