@@ -12,10 +12,10 @@ export const Footer = () => {
           <h3>Pages</h3>
           <div className="links flex flexc jcb">
             <NavLink to="/">Accueil</NavLink>
-            <NavLink to="/attente">Nos projets</NavLink>
+            <NavLink to="/projects">Nos projets</NavLink>
             <NavLink to="/services">Nos services</NavLink>
             <NavLink to="/agence">Notre agence</NavLink>
-            <NavLink to="/attente">Blog</NavLink>
+            <NavLink to="/blog">Notre blog</NavLink>
           </div>
         </div>
 
@@ -23,12 +23,7 @@ export const Footer = () => {
           <h3>Liens utiles</h3>
           <div className="links flex flexc jcb">
             <NavLink to="/contact">Contact</NavLink>
-            <NavLink
-              // to="/recrutement"
-              to="/attente"
-            >
-              Rejoignez-nous
-            </NavLink>
+            <NavLink to="/recrutement">Rejoignez-nous</NavLink>
             <NavLink to="/mentionslegales">Mentions légales</NavLink>
             <NavLink to="/cgu">CGU</NavLink>
           </div>

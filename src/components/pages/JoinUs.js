@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Waiting } from "../components/Waiting";
 
 export const JoinUs = () => {
-  //scroll en haut de page
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  return <div>JoinUs</div>;
+  return (
+    <div>
+      <Waiting name="recrutement" />
+    </div>
+  );
 };
