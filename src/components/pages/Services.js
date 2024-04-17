@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ModalService from "../components/ModalService";
 import Pack1 from "../../assets/img/text1.png";
 import Pack2 from "../../assets/img/text2.png";
 import Pack3 from "../../assets/img/text3.png";
 import Pack4 from "../../assets/img/text4.png";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export const Services = () => {
+  //scroll en haut de page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   //ouvrir la modal
   const [openModalIndex, setOpenModalIndex] = useState(null);
 
@@ -120,6 +126,7 @@ export const Services = () => {
 
   return (
     <div className="appContainer">
+      <ScrollToTopButton />
       {/* container de la page */}
       <div className="servicesContainer">
         {/* container section packs communnication */}
@@ -127,8 +134,8 @@ export const Services = () => {
           {/* container de titre et texte de présentation */}
           <div className="presentationContainer">
             {/* Arrière plan titre */}
-            <div className="titleServicesContainer">
-              <h1 className="titleServices">Communication</h1>
+            <div className="TitleContainerAccent">
+              <h1 className="Title">Communication</h1>
             </div>
             <p className="presentation">
               <span className="color">"Communication is key" </span>, c'est une
@@ -184,8 +191,8 @@ export const Services = () => {
           {/* container de titre et texte de présentation */}
           <div className="presentationContainer">
             {/* Arrière plan titre */}
-            <div className="titleServicesContainer">
-              <h1 className="titleServices">Web</h1>
+            <div className="TitleContainerAccent">
+              <h1 className="Title">Web</h1>
             </div>
             <p className="presentation">
               <span className="color">"Votre site parle pour vous" </span>, chez

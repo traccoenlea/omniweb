@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 import ArticleContainer from "../components/ArticleContainer";
 import { getArticles } from "../../apis/articles";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export const Blog = () => {
+  //scroll en haut de page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -21,6 +27,7 @@ export const Blog = () => {
 
   return (
     <div className="appContainer">
+      <ScrollToTopButton />
       <div className="TitleContainerAccent mt60">
         <h1 className="Title">Notre blog</h1>
       </div>

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export const Mentions = () => {
+  //scroll en haut de page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="appContainer flex flexc jcc">
+      <ScrollToTopButton />
       <div className="mentionsContainer">
         <div className="TitleContainerAccent">
           <h1 className="Title">Mentions Légales</h1>

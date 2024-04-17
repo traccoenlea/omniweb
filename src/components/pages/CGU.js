@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export const CGU = () => {
+  //scroll en haut de page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="appContainer flex flexc jcc">
+      <ScrollToTopButton />
       <div className="mentionsContainer">
         <div className="TitleContainerAccent">
           <h1 className="Title">Conditions Générales d'Utilisation</h1>

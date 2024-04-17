@@ -4,9 +4,7 @@ import { getAgencyStory } from "../../apis/agency";
 
 export const Chronologie = () => {
   const [openModalIndex, setOpenModalIndex] = useState(null);
-
   const [story, setStory] = useState([]);
-
   const [mobile, setMobile] = useState(false);
 
   const handleClickModal = (index) => {
@@ -35,12 +33,15 @@ export const Chronologie = () => {
     getStory();
   }, []);
 
+  // console.log("mobile:", mobile);
+  // console.log("story:", story);
+
   return (
     <div className="agencyContainer ">
-      {mobile ? (
-        <div>
-          {story.map((d, i) => (
-            <div key={i} className="flex stepContainer">
+      {story.map((d, i) => (
+        <div key={i} className="flex stepContainer">
+          {mobile ? (
+            <>
               <div className="middleContainer flex jcc">
                 <div className="verticalBorder"></div>
                 <div className="topBorder blankSpace"></div>
@@ -57,13 +58,9 @@ export const Chronologie = () => {
                   Voir plus
                 </button>
               </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div>
-          {story.map((d, i) => (
-            <div key={i} className="flex stepContainer">
+            </>
+          ) : (
+            <>
               {d.id % 2 === 1 ? (
                 <div className="stepContainer flex">
                   <div className="stepText">
@@ -125,17 +122,18 @@ export const Chronologie = () => {
                   </div>
                 </div>
               )}
-              <ModalChronologie
-                key={i}
-                isOpen={openModalIndex === i}
-                dataChrono={d}
-                handleCloseModal={() => setOpenModalIndex(null)}
-              />
-            </div>
-          ))}
+            </>
+          )}
+          {openModalIndex === i && (
+            <ModalChronologie
+              key={i}
+              isOpen={openModalIndex === i}
+              dataChrono={d}
+              handleCloseModal={() => setOpenModalIndex(null)}
+            />
+          )}
         </div>
-      )}
-
+      ))}
       <div className="wideText flex jcc mt30">To be continued...</div>
     </div>
   );

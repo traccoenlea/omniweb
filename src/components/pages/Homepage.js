@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../components/Button/Button";
 import ImgHp from "../../assets/img/hautparleur.png";
 import ImgHelp from "../../assets/img/help.png";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Homepage = () => {
+  //scroll en haut de page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // tableau offres communication
   let AtoutsTab = [
     {
@@ -29,6 +35,7 @@ const Homepage = () => {
   return (
     <div>
       <div className="appContainer">
+        <ScrollToTopButton />
         {/* Présentation container */}
         <div className="PresentationContainer">
           {/* présentation container 1 */}
@@ -63,7 +70,7 @@ const Homepage = () => {
                 <div className="IconTitleContainer">
                   <i className={d.icon}></i>
                   <div className="TitleAtoutContainer">
-                    <h3 className="Title">{d.title}</h3>
+                    <h3 className="TitleAtout">{d.title}</h3>
                   </div>
                 </div>
                 <div className="TextAtoutContainer">

@@ -25,7 +25,8 @@ export const Header = () => {
           Nos services
         </NavLink>
         <NavLink
-          to="/projets"
+          // to="/projets"
+          to="/attente"
           className="flex flexc jcc headerLink"
           activeClassName="active"
           onClick={handleNavLinkClick}
@@ -44,7 +45,8 @@ export const Header = () => {
           L'agence
         </NavLink>
         <NavLink
-          to="/blog"
+          // to="/blog"
+          to="/attente"
           className="flex flexc jcc headerLink"
           activeClassName="active"
           onClick={handleNavLinkClick}
@@ -78,7 +80,7 @@ export const Header = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="/offre"
+                        to="/services"
                         className="flex flexc jcc headerLink"
                         activeClassName="active"
                         onClick={handleNavLinkClick}
@@ -89,7 +91,8 @@ export const Header = () => {
                     <li>
                       {" "}
                       <NavLink
-                        to="/projets"
+                        // to="/projets"
+                        to="/attente"
                         className="flex flexc jcc headerLink"
                         activeClassName="active"
                         onClick={handleNavLinkClick}
