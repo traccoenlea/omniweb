@@ -19,16 +19,15 @@ export const Header = () => {
         <NavLink
           to="/services"
           className="flex flexc jcc headerLink"
-          activeClassName="active"
+          activeclassname="active"
           onClick={handleNavLinkClick}
         >
           Nos services
         </NavLink>
         <NavLink
-          // to="/projets"
-          to="/attente"
+          to="/projets"
           className="flex flexc jcc headerLink"
-          activeClassName="active"
+          activeclassname="active"
           onClick={handleNavLinkClick}
         >
           Nos projets
@@ -39,16 +38,15 @@ export const Header = () => {
         <NavLink
           to="/agence"
           className="flex flexc jcc headerLink"
-          activeClassName="active"
+          activeclassname="active"
           onClick={handleNavLinkClick}
         >
           Notre agence
         </NavLink>
         <NavLink
-          // to="/blog"
-          to="/attente"
+          to="/blog"
           className="flex flexc jcc headerLink"
-          activeClassName="active"
+          activeclassname="active"
           onClick={handleNavLinkClick}
         >
           Notre blog
@@ -72,7 +70,7 @@ export const Header = () => {
                       <NavLink
                         to="/"
                         className="flex flexc jcc headerLink"
-                        activeClassName="active"
+                        activeclassname="active"
                         onClick={handleNavLinkClick}
                       >
                         Accueil
@@ -82,7 +80,7 @@ export const Header = () => {
                       <NavLink
                         to="/services"
                         className="flex flexc jcc headerLink"
-                        activeClassName="active"
+                        activeclassname="active"
                         onClick={handleNavLinkClick}
                       >
                         Nos services
@@ -91,10 +89,9 @@ export const Header = () => {
                     <li>
                       {" "}
                       <NavLink
-                        // to="/projets"
-                        to="/attente"
+                        to="/projets"
                         className="flex flexc jcc headerLink"
-                        activeClassName="active"
+                        activeclassname="active"
                         onClick={handleNavLinkClick}
                       >
                         Nos projets
@@ -105,7 +102,7 @@ export const Header = () => {
                       <NavLink
                         to="/agence"
                         className="flex flexc jcc headerLink"
-                        activeClassName="active"
+                        activeclassname="active"
                         onClick={handleNavLinkClick}
                       >
                         Notre agence
@@ -114,9 +111,9 @@ export const Header = () => {
                     <li>
                       {" "}
                       <NavLink
-                        to="/attente"
+                        to="/blog"
                         className="flex flexc jcc headerLink"
-                        activeClassName="active"
+                        activeclassname="active"
                         onClick={handleNavLinkClick}
                       >
                         Notre blog

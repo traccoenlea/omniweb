@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Waiting } from "../components/Waiting";
 
 export const Projects = () => {
-  //scroll en haut de page
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  return <div>Projects</div>;
+  return (
+    <div>
+      <Waiting name="projets" />
+    </div>
+  );
 };

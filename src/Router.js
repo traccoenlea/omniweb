@@ -10,7 +10,6 @@ import { JoinUs } from "./components/pages/JoinUs";
 import { Mentions } from "./components/pages/Mentions";
 import { CGU } from "./components/pages/CGU";
 import { NotFound } from "./components/pages/NotFound";
-import { Waiting } from "../src/components/pages/Waiting";
 
 export const Router = createBrowserRouter([
   {
@@ -56,10 +55,6 @@ export const Router = createBrowserRouter([
       {
         element: <CGU />,
         path: "/cgu",
-      },
-      {
-        element: <Waiting />,
-        path: "/attente",
       },
     ],
   },
