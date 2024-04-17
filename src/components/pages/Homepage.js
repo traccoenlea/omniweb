@@ -3,6 +3,7 @@ import Button from "../components/Button/Button";
 import ImgHp from "../../assets/img/hautparleur.png";
 import ImgHelp from "../../assets/img/help.png";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import { NavLink } from "react-router-dom";
 
 const Homepage = () => {
   //scroll en haut de page
@@ -113,21 +114,33 @@ const Homepage = () => {
             <h2 className="Title">Nos réseaux</h2>
           </div>
           <div className="cards flex jcb">
-            <div className="card1 flex flexc jcc tac">
+            <NavLink
+              to="https://www.instagram.com/omnistos/"
+              target="_blank"
+              rel="noreferrer"
+              className="card1 flex flexc jcc tac"
+            >
               <i className="fa-brands fa-instagram"></i>
-              {/* <LucideInstagram size={65} className="iconInstagram" /> */}
               <p>Instagram</p>
-            </div>
-            <div className="card2 flex flexc jcc tac">
+            </NavLink>
+            <NavLink
+              className="card2 flex flexc jcc tac"
+              to="https://www.facebook.com/people/Omnistos/61556142703809/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fa-brands fa-facebook-f"></i>
-              {/* <LucideFacebook size={65} className="iconFacebook" /> */}
               <p>Facebook</p>
-            </div>
-            <div className="card3 flex flexc jcc tac">
+            </NavLink>
+            <NavLink
+              className="card3 flex flexc jcc tac"
+              to="https://www.linkedin.com/company/102143905/admin/feed/posts/?feedType=following"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fa-brands fa-linkedin-in"></i>
-              {/* <LucideLinkedin size={50} className="iconLinkedin" /> */}
               <p>LinkedIn</p>
-            </div>
+            </NavLink>
           </div>
         </div>
         {/* RS fin */}
