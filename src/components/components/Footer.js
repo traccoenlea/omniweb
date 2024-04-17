@@ -14,7 +14,7 @@ export const Footer = () => {
             <NavLink to="/">Accueil</NavLink>
             <NavLink to="/attente">Nos projets</NavLink>
             <NavLink to="/services">Nos services</NavLink>
-            <NavLink to="/agence">L'agence</NavLink>
+            <NavLink to="/agence">Notre agence</NavLink>
             <NavLink to="/attente">Blog</NavLink>
           </div>
         </div>
