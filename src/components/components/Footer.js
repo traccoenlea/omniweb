@@ -12,10 +12,10 @@ export const Footer = () => {
           <h3>Pages</h3>
           <div className="links flex flexc jcb">
             <NavLink to="/">Accueil</NavLink>
-            <NavLink to="/projets">Nos projets</NavLink>
-            <NavLink to="/offre">Nos services</NavLink>
+            <NavLink to="/attente">Nos projets</NavLink>
+            <NavLink to="/services">Nos services</NavLink>
             <NavLink to="/agence">L'agence</NavLink>
-            <NavLink to="/blog">Blog</NavLink>
+            <NavLink to="/attente">Blog</NavLink>
           </div>
         </div>
 
@@ -37,7 +37,8 @@ export const Footer = () => {
         <div className="footerDividerContact">
           <h3>Contact</h3>
           <div className="links">
-            <p>Lorem ipsum machin chouette</p>
+            <p>07 49 41 48 42</p>
+            <p>contact@omnistos.fr</p>
           </div>
         </div>
       </div>
@@ -46,7 +47,7 @@ export const Footer = () => {
 
       <div className="socialsLinks flex jcb">
         <a
-          href="https://www.facebook.com"
+          href="https://www.facebook.com/people/Omnistos/61556142703809/"
           target="_blank"
           rel="noreferrer"
           className="flex flexc jcc mauto"
@@ -54,7 +55,7 @@ export const Footer = () => {
           <Facebook className="test" />
         </a>
         <a
-          href="https://www.facebook.com"
+          href="https://www.linkedin.com/company/102143905/admin/feed/posts/?feedType=following"
           target="_blank"
           rel="noreferrer"
           className="flex flexc jcc mauto"
@@ -62,7 +63,7 @@ export const Footer = () => {
           <LinkedIn />
         </a>
         <a
-          href="https://www.facebook.com"
+          href="https://www.instagram.com/omnistos/"
           target="_blank"
           rel="noreferrer"
           className="flex flexc jcc mauto"

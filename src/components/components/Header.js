@@ -114,7 +114,7 @@ export const Header = () => {
                     <li>
                       {" "}
                       <NavLink
-                        to="/blog"
+                        to="/attente"
                         className="flex flexc jcc headerLink"
                         activeClassName="active"
                         onClick={handleNavLinkClick}
