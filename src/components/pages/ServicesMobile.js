@@ -31,25 +31,25 @@ const ServicesMobile = ({ packs }) => {
               <div className="bottomLeftPart">
                 {d.text1 && (
                   <div className="textDetail">
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i className="fa-solid fa-circle-check"></i>
                     <p>{d.text1}</p>
                   </div>
                 )}
                 {d.text2 && (
                   <div className="textDetail">
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i className="fa-solid fa-circle-check"></i>
                     <p>{d.text2}</p>
                   </div>
                 )}
                 {d.text3 && (
                   <div className="textDetail">
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i className="fa-solid fa-circle-check"></i>
                     <p>{d.text3}</p>
                   </div>
                 )}
                 {d.text4 && (
                   <div className="textDetail">
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i className="fa-solid fa-circle-check"></i>
                     <p>{d.text4}</p>
                   </div>
                 )}

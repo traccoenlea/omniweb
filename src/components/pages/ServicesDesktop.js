@@ -14,7 +14,7 @@ const ServicesDesktop = ({ packs }) => {
   // track the clicks on buttons
   // const handleSeeMoreBtn = ({ index }) => {
   function handleSeeMoreBtn(index) {
-    console.log(packs[0]);
+    console.log(packs[index].type);
     ReactGA.event({
       category: "User",
       action: `Saw more on pack ${index}`,
