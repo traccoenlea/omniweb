@@ -7,17 +7,21 @@ const ServicesDesktop = ({ packs }) => {
 
   const handleClickModal = (index) => {
     setOpenModalIndex(index);
+    console.log(index);
     handleSeeMoreBtn(index);
   };
 
   // track the clicks on buttons
-  const handleSeeMoreBtn = ({ number }) => {
+  // const handleSeeMoreBtn = ({ index }) => {
+  function handleSeeMoreBtn(index) {
+    console.log(packs[0]);
     ReactGA.event({
       category: "User",
-      action: `Saw more on pack ${number}`,
+      action: `Saw more on pack ${index}`,
+      // label: ,
     });
     console.log();
-  };
+  }
 
   return (
     <div>
