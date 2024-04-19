@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Homepage from "./components/pages/Homepage";
 import { Projects } from "./components/pages/Projects";
-import { Services } from "./components/pages/Services";
+import { Services } from "./components/pages/Services 2";
 import { Agency } from "./components/pages/Agency";
 import { Blog } from "./components/pages/Blog";
 import { Contact } from "./components/pages/Contact";

@@ -65,9 +65,9 @@
       @media screen and (max-width: 720px) {
         height: 300px;
         .packContainer {
-          &:first-of-type {
-            // margin-left: 210%;
-          }
+          // &:first-of-type {
+          // margin-left: 210%;
+          // }
           &:last-of-type {
             background: #000;
           }
@@ -240,24 +240,62 @@
   }
 }
 
-// @media screen and (max-width: 900px) {
-//   .containerPacks {
-//     display: flex;
-//     flex-flow: row nowrap;
-//     overflow-x: auto;
-//     scroll-snap-type: x mandatory;
-//     -webkit-overflow-scrolling: touch;
-//     // gap: 20px; /* Espacement entre les packs */
-//   }
+//mobile
+.packMobileContainer {
+  margin-top: 45px;
+}
+.packMobile {
+  border: 5px solid black;
+  box-shadow: 4px 4px black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
 
-//   .containerPacks::-webkit-scrollbar {
-//     display: none; /* Masquer la barre de défilement */
-//   }
+  .topPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    i {
+      font-size: 20px;
+    }
+  }
 
-//   .containerPacks > div {
-//     flex: 0 0 auto;
-//     scroll-snap-align: start;
-//     min-width: 100%; /* Largeur minimale d'un pack */
-//     margin-right: 20px;
-//   }
-// }
+  .bottomPart {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    .bottomLeftPart {
+      width: 50%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      .textDetail {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        i {
+          font-size: 14px;
+          color: var(--accent);
+          margin-right: 5px;
+        }
+      }
+
+      .contactMsg {
+        font-size: 14px;
+        margin-top: 20px;
+        .msg {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .priceContainer {
+      font-family: "Agrandir Wide Black";
+    }
+  }
+}

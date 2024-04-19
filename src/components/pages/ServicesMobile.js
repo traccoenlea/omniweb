@@ -1,58 +1,75 @@
 import React, { useState } from "react";
-import { Navigation, Pagination, Scrollbar } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import ModalService from "../components/ModalService";
+import { NavLink } from "react-router-dom";
+// import ModalService from "../components/ModalService";
 
 const ServicesMobile = ({ packs }) => {
-  const [openModalIndex, setOpenModalIndex] = useState(null);
+  const [openDetailIndex, setOpenDetailIndex] = useState(null);
 
-  const handleClickModal = (index) => {
-    setOpenModalIndex(index);
+  const handleClickDetail = (index) => {
+    setOpenDetailIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+
   return (
-    <Swiper
-      slidesPerView={"auto"}
-      modules={[Pagination]}
-      centeredSlides={true}
-      pagination={{
-        clickable: true,
-      }}
-      spaceBetween={50}
-      className="containerPacks swiper-wrapper"
-    >
+    <div className="packMobileContainer">
       {packs.map((d, i) => (
-        <SwiperSlide key={i} className={d.className}>
-          {/* partie gauche du pack */}
-          <div className="leftPart">
+        <div key={i} className="packMobile">
+          {/* partie titre + chevron */}
+          <div className="topPart">
             <div className={d.titleClassName}>
-              <h2 className="titlePack">{d.title}</h2>
+              <h2 className="">{d.title}</h2>
             </div>
-            <div className="offrePackContainer">
-              <p className="offrePack">{d.text1}</p>
-              <p className="offrePack">{d.text2}</p>
+            <i
+              className="fa-solid fa-chevron-down"
+              onClick={() => handleClickDetail(i)}
+            ></i>
+          </div>
+
+          {openDetailIndex !== null && openDetailIndex === i && (
+            // partie contenu + contact + prix
+            <div key={openDetailIndex} className="bottomPart">
+              {/* container detail pack */}
+              <div className="bottomLeftPart">
+                {d.text1 && (
+                  <div className="textDetail">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>{d.text1}</p>
+                  </div>
+                )}
+                {d.text2 && (
+                  <div className="textDetail">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>{d.text2}</p>
+                  </div>
+                )}
+                {d.text3 && (
+                  <div className="textDetail">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>{d.text3}</p>
+                  </div>
+                )}
+                {d.text4 && (
+                  <div className="textDetail">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>{d.text4}</p>
+                  </div>
+                )}
+                <div className="contactMsg">
+                  <p>
+                    {/* Vous êtes intéréssé ?{" "} */}
+                    <NavLink to="/contact" className="msg">
+                      Contactez-nous
+                    </NavLink>
+                  </p>
+                </div>
+              </div>
+              <div className="priceContainer">
+                <p>{d.price}</p>
+              </div>
             </div>
-            <button
-              className="buttonPack wideText"
-              onClick={() => handleClickModal(i)}
-            >
-              <i className="fa-solid fa-arrow-right"></i>Voir plus
-            </button>
-          </div>
-          {/* partie droite du pack */}
-          <div className="rightPart">
-            <img className="ImgId" src={d.img} alt="numéro du pack" />
-          </div>
-        </SwiperSlide>
+          )}
+        </div>
       ))}
-      {openModalIndex !== null && (
-        <ModalService
-          key={openModalIndex}
-          isOpen={openModalIndex !== null}
-          dataWeb={packs[openModalIndex]}
-          handleCloseModal={() => setOpenModalIndex(null)}
-        />
-      )}
-    </Swiper>
+    </div>
   );
 };
 
