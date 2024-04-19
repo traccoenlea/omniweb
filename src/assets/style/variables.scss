@@ -16,6 +16,12 @@
   }
 
   @font-face {
+    font-family: "Agrandir Wide Black"; /*Can be any text*/
+    src: local("Agrandir-WideBlackItalic"),
+      url("../../fonts/Agrandir-WideBlackItalic.otf") format("truetype");
+  }
+
+  @font-face {
     font-family: "Agrandir Wide Light"; /*Can be any text*/
     src: local("Agrandir-WideLight"),
       url("../../fonts/Agrandir-WideLight.otf") format("truetype");
