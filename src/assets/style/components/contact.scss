@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: flex-start;
   @media screen and (max-width: 900px) {
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-flow: column nowrap;
   }
@@ -52,7 +52,10 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         .contactInputNomPrenom {
-          width: 45%;
+          width: 40%;
+          @media screen and (max-width: 720px) {
+            width: 38%;
+          }
         }
       }
       .contactInput,
