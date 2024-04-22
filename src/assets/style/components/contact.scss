@@ -43,6 +43,10 @@
       margin-top: 30px;
     }
 
+    .error {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
     .contactForm {
       display: flex;
       flex-flow: column;
@@ -51,10 +55,13 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        .contactInputNomPrenom {
-          width: 40%;
+        width: 100%;
+        .inputContainer {
+          display: flex;
+          flex-flow: column nowrap;
+          width: 48%;
           @media screen and (max-width: 720px) {
-            width: 38%;
+            width: 45%;
           }
         }
       }

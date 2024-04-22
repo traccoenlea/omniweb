@@ -136,31 +136,34 @@ export const Contact = () => {
         <div className="rightPart">
           <form method="POST" className="contactForm">
             <div className="nomPrenomContainer">
-              {/* INPUT nom */}
-              <input
-                className="contactInputNomPrenom"
-                type="text"
-                name="Nom"
-                value={userData.Nom}
-                placeholder="Nom..."
-                autoComplete="off"
-                onChange={data}
-                maxLength={25} // Limiter le nombre de caractères
-              />
-              {errors.Nom && <div className="error">{errors.Nom}</div>}
-
-              {/* INPUT prénom */}
-              <input
-                className="contactInputNomPrenom"
-                type="text"
-                name="Prenom"
-                value={userData.Prenom}
-                placeholder="Prénom..."
-                autoComplete="off"
-                onChange={data}
-                maxLength={20} // Limiter le nombre de caractères
-              />
-              {errors.Prenom && <div className="error">{errors.Prenom}</div>}
+              <div className="inputContainer">
+                {/* INPUT nom */}
+                <input
+                  className="contactInputNomPrenom"
+                  type="text"
+                  name="Nom"
+                  value={userData.Nom}
+                  placeholder="Nom..."
+                  autoComplete="off"
+                  onChange={data}
+                  maxLength={25} // Limiter le nombre de caractères
+                />
+                {errors.Nom && <div className="error">{errors.Nom}</div>}
+              </div>
+              <div className="inputContainer">
+                {/* INPUT prénom */}
+                <input
+                  className="contactInputNomPrenom"
+                  type="text"
+                  name="Prenom"
+                  value={userData.Prenom}
+                  placeholder="Prénom..."
+                  autoComplete="off"
+                  onChange={data}
+                  maxLength={20} // Limiter le nombre de caractères
+                />
+                {errors.Prenom && <div className="error">{errors.Prenom}</div>}
+              </div>
             </div>
 
             {/* INPUT email */}
