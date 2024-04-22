@@ -1,207 +1,227 @@
-import React, { useEffect } from "react";
-import * as yup from "yup";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { addContactToDb, sendingEmail } from "../../apis/contact";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 export const Contact = () => {
-  //scroll en haut de page
+  // Gérer les erreurs
+  const [errors, setErrors] = useState({
+    Nom: "",
+    Prenom: "",
+    Email: "",
+    Message: "",
+  });
+
+  // Gérer si les cgu sont cochées
+  const [isChecked, setIsChecked] = useState(false);
+
+  // Stocker les données du formulaire
+  const [userData, setUserData] = useState({
+    Nom: "",
+    Prenom: "",
+    Email: "",
+    Message: "",
+  });
+
+  // State pour compter le nombre d'envois de formulaire
+  const [formSubmissions, setFormSubmissions] = useState(0);
+
+  // Récupérer le nombre d'envois de formulaire
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const submissions = localStorage.getItem("formSubmissions");
+    if (submissions) {
+      setFormSubmissions(parseInt(submissions));
+    }
   }, []);
 
-  const yupSchema = yup.object({
-    name: yup.string().required("Ce champ doit être renseigné"),
-    surname: yup.string().required("Ce champ doit être renseigné"),
-    email: yup
-      .string()
-      .email("L'email doit être valide")
-      .required("Ce champ doit être renseigné"),
-    message: yup
-      .string()
-      .required("Ce champ doit être renseigné")
-      .min(10, "Votre message doit faire minimum 10 caractères.")
-      .max(500, "Votre message doit faire maximum 500 caractères."),
-    // consent: yup
-    //   .boolean(true)
-    //   .required("Vous ne pouvez pas nous contacter sans cocher cette case."),
-    consent: yup
-      .bool()
-      .oneOf(
-        [true],
-        "Vous ne pouvez pas nous contacter sans cocher cette case."
-      )
-      .required("Vous ne pouvez pas nous contacter sans cocher cette case."),
-  });
+  // Mettre à jour le nombre d'envois de formulaire
+  useEffect(() => {
+    localStorage.setItem("formSubmissions", formSubmissions.toString());
+  }, [formSubmissions]);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    setError,
-    reset,
-  } = useForm({
-    defaultValues: {
-      name: "",
-      surname: "",
-      email: "",
-      message: "",
-      consent: false,
-    },
-    resolver: yupResolver(yupSchema),
-  });
+  // Mettre à jour les données du formulaire
+  const data = (e) => {
+    const { name, value } = e.target;
 
-  const submit = handleSubmit(async (values) => {
-    try {
-      let today = new Date();
-
-      today =
-        today.getFullYear() +
-        "-" +
-        (today.getMonth() + 1) +
-        "-" +
-        today.getDate() +
-        " " +
-        today.getHours() +
-        ":" +
-        today.getMinutes() +
-        ":00";
-
-      const email = values.email;
-      const name = values.name;
-      const surname = values.surname;
-      const message = values.message;
-
-      const data = [
-        {
-          email: email,
-          name: name,
-          surname: surname,
-          message: message,
-          date: today,
-        },
-      ];
-
-      const contactDB = await addContactToDb(data);
-      if (contactDB !== false) {
-        await sendingEmail(data);
-        alert("Nous avons bien reçu votre demande de contact !");
-        reset();
-      }
-    } catch (error) {
-      console.error(error);
+    // Limiter le nombre de caractères dans message
+    if (name === "Message" && value.length > 300) {
+      return;
     }
-  });
+
+    setUserData({ ...userData, [name]: value });
+    setErrors({ ...errors, [name]: "" });
+  };
+
+  // Envoyer les données du formulaire
+  const send = async (e) => {
+    e.preventDefault();
+
+    let formIsValid = true;
+    const newErrors = {};
+
+    // Vérifier les champs du formulaire
+    Object.keys(userData).forEach((key) => {
+      if (!userData[key]) {
+        formIsValid = false;
+        newErrors[key] = `${key} est requis`;
+      }
+    });
+
+    setErrors(newErrors);
+
+    if (!formIsValid) {
+      return;
+    }
+
+    // Vérifier si l'utilisateur a accepté les cgu
+    if (!isChecked) {
+      alert("Veuillez accepter les conditions générales d'utilisation.");
+      return;
+    }
+
+    // Limiter le nombre d'envois de formulaire à 2
+    if (formSubmissions >= 2) {
+      alert("Vous avez déjà envoyé le formulaire deux fois.");
+      return;
+    }
+
+    // Config envoi des données du formulaire
+    const option = {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    };
+
+    // Envoi des données du formulaire en bdd
+    const res = await fetch(
+      "https://omnistos-2a3a2-default-rtdb.europe-west1.firebasedatabase.app/Messages.json",
+      option
+    );
+
+    // Vérifier si l'envoi a réussi
+    if (res.ok) {
+      alert("Votre message a été pris en compte");
+      setFormSubmissions(formSubmissions + 1);
+
+      // Réinitialiser les données du formulaire
+      setUserData({
+        Nom: "",
+        Prenom: "",
+        Email: "",
+        Message: "",
+      });
+    }
+  };
+
   return (
-    <div className="appContainer">
-      <div className="mt60 mb60 flex jcb hfc contactContainer">
-        <div className="contactPresentation">
+    <>
+      <div className="appContainer contactContainer">
+        {/* Partie gauche */}
+        <div className="leftPartContact">
           <div className="TitleContainerAccent">
             <h1 className="Title">Contactez-nous</h1>
           </div>
-
-          <div className="contactData">
-            <div className="flex jcfs">
-              <i className="fa-solid fa-phone flex flexc jcc"></i>
-              <h3 className="color "> 07 49 41 48 42</h3>
+          <div className="infosContactContainer">
+            <div className="infoContact">
+              <i className="fa-solid fa-phone"></i>
+              <p>07 49 41 48 42</p>
             </div>
-            <div className="flex jcfs">
-              <i className="fa-solid fa-envelope flex flexc jcc"></i>
-              <h3 className="color "> contact@omnistos.fr</h3>
+            <div className="infoContact">
+              <i className="fa-solid fa-envelope"></i>
+              <p>contact@omistos.fr</p>
             </div>
           </div>
         </div>
-        <div className="bb"></div>
-        <form onSubmit={submit} className="formContainer jcc aic">
-          <div className="flex jcb">
-            <div className="flex flexc inputContainer">
-              <div className="">
-                {/* <label htmlFor="surname">Nom</label> */}
-                <input
-                  type="text"
-                  id="surname"
-                  {...register("surname")}
-                  placeholder="Nom..."
-                  className="smallInput"
-                />
-              </div>
-              {errors?.surname && (
-                <p className="error">{errors.surname.message}</p>
-              )}
-            </div>
-
-            <div className="flex flexc inputContainer">
-              <div className=" flex jcfe">
-                {/* <label htmlFor="name">Prénom</label> */}
-                <input
-                  type="text"
-                  id="name"
-                  {...register("name")}
-                  placeholder="Prénom..."
-                  className="smallInput"
-                />
-              </div>
-              {errors?.name && <p className="error ">{errors.name.message}</p>}
-            </div>
-          </div>
-
-          <div className="inputContainer">
-            {/* <label htmlFor="email">Mail</label> */}
-            <input
-              type="mail"
-              id="email"
-              {...register("email")}
-              placeholder="Email..."
-              className="bigInput mt30"
-            />
-          </div>
-          {errors?.email && <p className="error">{errors.email.message}</p>}
-
-          <div className="inputContainer ">
-            {/* <label htmlFor="message">Message</label> */}
-            <textarea
-              id="message"
-              {...register("message")}
-              placeholder="Message..."
-              className="bigInput textareaInput mt30"
-            />
-          </div>
-
-          {errors?.message && <p className="error">{errors.message.message}</p>}
-
-          <div className="flex jce consentContainer mt20">
-            <div className="flex flexc mb5">
+        {/* Partie droite */}
+        <div className="rightPart">
+          <form method="POST" className="contactForm">
+            <div className="nomPrenomContainer">
+              {/* INPUT nom */}
               <input
-                type="checkbox"
-                className="flex flexc"
-                id="consent"
-                {...register("consent")}
+                className="contactInputNomPrenom"
+                type="text"
+                name="Nom"
+                value={userData.Nom}
+                placeholder="Nom..."
+                autoComplete="off"
+                onChange={data}
+                maxLength={25} // Limiter le nombre de caractères
               />
+              {errors.Nom && <div className="error">{errors.Nom}</div>}
+
+              {/* INPUT prénom */}
+              <input
+                className="contactInputNomPrenom"
+                type="text"
+                name="Prenom"
+                value={userData.Prenom}
+                placeholder="Prénom..."
+                autoComplete="off"
+                onChange={data}
+                maxLength={20} // Limiter le nombre de caractères
+              />
+              {errors.Prenom && <div className="error">{errors.Prenom}</div>}
             </div>
 
-            <div className="consent">
-              <label htmlFor="consent">J'ai lu et j'accepte les </label>
-              <NavLink
-                to="/cgu"
-                target="__blank"
-                rel="noreferrer"
-                className="cguLinks"
-              >
-                Conditions Générales d'Utilisation (CGU)
-              </NavLink>
+            {/* INPUT email */}
+            <input
+              className="contactInput"
+              type="email"
+              name="Email"
+              value={userData.Email}
+              placeholder="Adresse email..."
+              autoComplete="off"
+              onChange={data}
+              maxLength={45} // Limiter le nombre de caractères
+            />
+            {errors.Email && <div className="error">{errors.Email}</div>}
 
-              {errors?.consent && (
-                <p className="error">{errors.consent.message}</p>
-              )}
+            {/* INPUT message */}
+            <textarea
+              className="contactInputMsg"
+              value={userData.Message}
+              name="Message"
+              placeholder="Votre message..."
+              autoComplete="off"
+              onChange={data}
+              maxLength={300} // Limiter le nombre de caractères
+            />
+            {errors.Message && <div className="error">{errors.Message}</div>}
+
+            {/* Case à cocher pour accepter les conditions générales */}
+            <div className="consentContainer">
+              <div className="consentCheckbox">
+                <input
+                  type="checkbox"
+                  className="contactCheckbox"
+                  id="consent"
+                  checked={isChecked}
+                  onChange={(e) => setIsChecked(e.target.checked)}
+                />
+              </div>
+              {/* Texte des conditions générales */}
+              <div className="consent">
+                <label htmlFor="consent">J'ai lu et j'accepte les </label>
+                <NavLink
+                  to="/cgu"
+                  target="__blank"
+                  rel="noreferrer"
+                  className="cguLinks"
+                >
+                  Conditions Générales d'Utilisation (CGU)
+                </NavLink>
+              </div>
             </div>
-          </div>
 
-          <div className="buttonFormContainer">
-            <button className="buttonForm">Envoyer</button>
-          </div>
-        </form>
+            {/* Bouton pour envoyer le formulaire */}
+            <div className="buttonFormContainer">
+              <button onClick={send} className="buttonForm">
+                Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
