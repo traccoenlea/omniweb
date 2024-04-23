@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ModalChronologie from "./ModalChronologie";
-import { getAgencyStory } from "../../apis/agency";
+import { collection, getDocs } from "firebase/firestore";
+import { database } from "../../config/firebase";
 
 export const Chronologie = () => {
   const [openModalIndex, setOpenModalIndex] = useState(null);
@@ -10,6 +11,8 @@ export const Chronologie = () => {
   const handleClickModal = (index) => {
     setOpenModalIndex(index);
   };
+
+  const storyCollectionRef = collection(database, "Story");
 
   useEffect(() => {
     async function getWidth() {
@@ -23,18 +26,22 @@ export const Chronologie = () => {
 
     async function getStory() {
       try {
-        const data = await getAgencyStory();
-        setStory(data);
+        const data = await getDocs(storyCollectionRef);
+        const allStory = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setStory(allStory);
       } catch (error) {
         console.error(error);
       }
     }
+
     getWidth();
     getStory();
-  }, []);
+  }, [storyCollectionRef]);
 
-  // console.log("mobile:", mobile);
-  // console.log("story:", story);
+  console.log(story);
 
   return (
     <div className="agencyContainer ">

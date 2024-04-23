@@ -73,7 +73,7 @@ export const Contact = () => {
 
     // Vérifier si l'utilisateur a accepté les cgu
     if (!isChecked) {
-      alert("Veuillez accepter les conditions générales d'utilisation.");
+      alert("Veuillez accepter les Conditions Générales d'Utilisation.");
       return;
     }
 
