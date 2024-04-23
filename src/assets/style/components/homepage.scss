@@ -13,7 +13,7 @@
 
   .PresentationPart1 {
     width: 50%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,6 +29,9 @@
     max-height: 350px;
     @media screen and (max-width: 1000px) {
       display: none;
+    }
+    @media screen and (min-width: 1700px) {
+      max-height: 500px;
     }
   }
 }
@@ -114,13 +117,6 @@
 
 // Section service
 .ServiceContainer {
-  // width: 100%;
-  // display: flex;
-  // flex-flow: row nowrap;
-  // justify-content: space-between;
-  // align-items: center;
-  // margin-top: 60px;
-  // margin-bottom: 60px;
   width: 100%;
   height: auto;
   display: flex;
@@ -134,13 +130,6 @@
   }
 
   .ServicePart1 {
-    // width: 50%;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // @media screen and (max-width: 1000px) {
-    //   width: 100%;
-    // }
     width: 50%;
     height: auto;
     display: flex;
@@ -152,17 +141,13 @@
     }
   }
   .Illustration2 {
-    //   width: 35%;
-    //   height: 100%;
-    //   margin: 3% 0;
-    //   @media screen and (max-width: 1000px) {
-    //     display: none;
-    //   }
-    // }
     min-width: 350px;
     max-height: 350px;
     @media screen and (max-width: 1000px) {
       display: none;
+    }
+    @media screen and (min-width: 1700px) {
+      max-height: 500px;
     }
   }
 }

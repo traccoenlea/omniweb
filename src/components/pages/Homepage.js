@@ -41,18 +41,16 @@ const Homepage = () => {
         <div className="PresentationContainer">
           {/* présentation container 1 */}
           <div className="PresentationPart1">
-            <div>
-              <div className="TitleContainerAccent">
-                <h1 className="Title">Notre agence</h1>
-              </div>
-              <h3 className="maxw90 mb5 H3Presentation">
-                Nous sommes une{" "}
-                <span className="color">agence de communication </span> qui vous
-                accompagne et vous conseille lors de la création de vos{" "}
-                <span className="color">supports de communication</span> (print,
-                digital et site web).
-              </h3>
+            <div className="TitleContainerAccent">
+              <h1 className="Title">Notre agence</h1>
             </div>
+            <h3 className="maxw90 mb5 H3Presentation">
+              Nous sommes une{" "}
+              <span className="color">agence de communication </span> qui vous
+              accompagne et vous conseille lors de la création de vos{" "}
+              <span className="color">supports de communication</span> (print,
+              digital et site web).
+            </h3>
             <Button title="Contactez-nous" link="/contact" />
           </div>
           <img src={ImgHp} alt="" className="Illustration1" />
