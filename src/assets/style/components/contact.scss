@@ -1,106 +1,92 @@
 .contactContainer {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
   @media screen and (max-width: 900px) {
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-flow: column nowrap;
   }
 
-  .contactData {
-    width: 100%;
+  .leftPartContact {
+    display: flex;
+    flex-flow: column nowrap;
 
-    div {
-      margin-bottom: 20px;
-    }
+    .infosContactContainer {
+      .contactSubtitle {
+        margin-bottom: 30px;
+      }
+      .infoContact {
+        margin-bottom: 10px;
+        display: flex;
+        flex-flow: row nowrap;
 
-    i {
-      font-size: 1.5rem;
-      margin-right: 20px;
+        i {
+          margin-right: 10px;
+          color: var(--accent);
+        }
+      }
     }
   }
 
-  .contactPresentation {
-    p {
-      width: 80%;
-    }
-    @media screen and (max-width: 900px) {
-      margin-bottom: 30px;
-    }
-  }
-
-  .formContainer {
+  .rightPart {
     width: 50%;
+    input:not([type="checkbox"]),
+    textarea {
+      all: unset;
+    }
     @media screen and (max-width: 900px) {
       width: 100%;
       margin-top: 30px;
     }
 
     .error {
-      text-align: center;
-      font-size: 0.75rem;
-      font-style: italic;
       color: var(--accent);
-      margin: 8px 0 0 0;
+      margin-bottom: 10px;
     }
-
-    .inputContainer {
-      width: 100%;
-
-      .smallInput,
-      .bigInput {
-        padding: 0 5%;
-        height: 40px;
-        border: 4px solid black;
-        border-radius: 8px;
-        background: rgba($color: #afafaf, $alpha: 0.05);
-        box-shadow: 3px 3px var(--primary);
-        text-decoration-color: rgba(0, 0, 0, 0);
-        transition: text-decoration-color 500ms;
-        transition: box-shadow 300ms;
-        outline: none;
-        &::placeholder {
-          color: var(--primary);
-          font-family: "Agrandir";
-        }
-      }
-      .smallInput:focus,
-      .bigInput:focus {
-        text-decoration: underline;
-        text-decoration-color: black;
-        box-shadow: 5px 5px black;
-      }
-      .smallInput:hover,
-      .bigInput:hover {
-        box-shadow: 5px 5px black;
-      }
-      .smallInput {
-        width: 95%;
-      }
-
-      .bigInput {
-        width: 100%;
-      }
-
-      .textareaInput {
-        height: 150px;
-        padding-top: 3%;
-      }
-    }
-    .consentContainer {
+    .contactForm {
       display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
+      flex-flow: column;
       width: 100%;
-
-      .consent {
-        font-size: 0.8rem;
-        width: 95%;
-        margin-left: 10px;
-        .cguLinks {
-          font-weight: bold;
+      .nomPrenomContainer {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+        .inputContainer {
+          display: flex;
+          flex-flow: column nowrap;
+          width: 48%;
+          @media screen and (max-width: 720px) {
+            width: 45%;
+          }
         }
-        .cguLinks:hover {
-          text-decoration: underline;
-        }
+      }
+      .contactInput,
+      .contactInputMsg,
+      .contactInputNomPrenom {
+        border: 5px solid black;
+        border-radius: 10px;
+        box-shadow: 2px 2px black;
+        height: 5vh;
+        color: black;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        transition: all 500ms;
+      }
+      .contactInput:focus,
+      .contactInputMsg:focus,
+      .contactInputNomPrenom:focus {
+        box-shadow: 5px 5px black;
+      }
+      .contactInputMsg {
+        height: 20vh;
+        padding-top: 10px;
+        overflow-wrap: break-word;
       }
     }
 
@@ -130,6 +116,20 @@
       .buttonForm:hover {
         background-color: var(--accent);
       }
+    }
+
+    .consentContainer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      .consentCheckbox {
+        margin-right: 2%;
+      }
+    }
+
+    .cguLinks {
+      text-decoration: underline;
+      font-weight: bold;
     }
   }
 }
