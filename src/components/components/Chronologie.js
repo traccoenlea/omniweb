@@ -39,7 +39,7 @@ export const Chronologie = () => {
 
     getWidth();
     getStory();
-  }, [storyCollectionRef]);
+  }, []);
 
   console.log(story);
 
