@@ -7,7 +7,6 @@ const ServicesDesktop = ({ packs }) => {
   const handleClickModal = (index) => {
     setOpenModalIndex(index);
     console.log(index);
-    handleSeeMoreBtn(index);
   };
 
   return (
