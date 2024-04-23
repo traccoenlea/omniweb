@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ModalService from "../components/ModalService";
-import ReactGA from "react-ga4";
 
 const ServicesDesktop = ({ packs }) => {
   const [openModalIndex, setOpenModalIndex] = useState(null);
@@ -10,18 +9,6 @@ const ServicesDesktop = ({ packs }) => {
     console.log(index);
     handleSeeMoreBtn(index);
   };
-
-  // track the clicks on buttons
-  // const handleSeeMoreBtn = ({ index }) => {
-  function handleSeeMoreBtn(index) {
-    console.log(packs[index].type);
-    ReactGA.event({
-      category: "User",
-      action: `Saw more on pack ${index}`,
-      // label: ,
-    });
-    console.log();
-  }
 
   return (
     <div>
