@@ -55,7 +55,6 @@ const ServicesMobile = ({ packs }) => {
                 )}
                 <div className="contactMsg">
                   <p>
-                    {/* Vous êtes intéréssé ?{" "} */}
                     <NavLink to="/contact" className="msg">
                       Contactez-nous
                     </NavLink>

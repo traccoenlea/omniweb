@@ -35,6 +35,12 @@ function ModalService({ isOpen, dataWeb, handleCloseModal }) {
                     <p>{dataWeb.text3}</p>
                   </div>
                 )}
+                {dataWeb.text4 && (
+                  <div className="detail">
+                    <i className="fa-solid fa-circle-check"></i>
+                    <p>{dataWeb.text4}</p>
+                  </div>
+                )}
               </div>
               {/* le prix */}
               <div className="priceContainer">
@@ -43,16 +49,16 @@ function ModalService({ isOpen, dataWeb, handleCloseModal }) {
               {/* CAT vers contact */}
               <div>
                 <p>
-                  Vous êtes intéréssé ?{" "}
+                  Vous êtes intéressé(e) ?{" "}
                   <NavLink to="/contact" className="servicesNavlink">
                     Contactez-nous
                   </NavLink>
                 </p>
               </div>
               {/* les modalités */}
-              {/* <div className="modalityContainer">
+              <div className="modalityContainer">
                 <p className="modality">{dataWeb.modality}</p>
-              </div> */}
+              </div>
             </div>
             {/* bouton de fermeture */}
             <button onClick={handleCloseModal}>

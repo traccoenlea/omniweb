@@ -22,6 +22,8 @@ const ServicesDesktop = ({ packs }) => {
               <div className="offrePackContainer">
                 <p className="offrePack">{d.text1}</p>
                 <p className="offrePack">{d.text2}</p>
+                <p className="offrePack">{d.text3}</p>
+                <p className="offrePack">{d.text4}</p>
               </div>
               <button
                 className="buttonPack wideText"
