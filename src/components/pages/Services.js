@@ -156,7 +156,7 @@ export const Services = () => {
           </div>
           {/* Container des packs communication */}
 
-          {width <= 900 ? (
+          {width <= 1024 ? (
             <ServicesMobile packs={PacksCommunication} />
           ) : (
             <div>
@@ -182,7 +182,7 @@ export const Services = () => {
           </div>
           {/* Container des packs web */}
 
-          {width <= 900 ? (
+          {width <= 1024 ? (
             <ServicesMobile packs={PacksWeb} />
           ) : (
             <div>

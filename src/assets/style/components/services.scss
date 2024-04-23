@@ -47,16 +47,12 @@
         align-items: center;
         width: 99.2vw;
         flex-flow: row nowrap;
-        // overflow-x: auto;
         height: 350px;
-        // gap: 20px;
         justify-content: flex-end;
         margin: 0 12% 0 12%;
 
         .swiper-wrapper {
           display: flex;
-          // border: 1px solid red;
-          // margin: 0 !important;
         }
         .swiper-slide {
           margin: 0;
@@ -84,16 +80,17 @@
         justify-content: space-between;
         padding: 2% 3%;
         height: 350px;
+        min-height: 400px;
         color: var(--primary);
         border-radius: 25px;
         border: solid 5px var(--primary);
         box-shadow: 4px 4px var(--primary);
-        @media screen and (max-width: 1500px) {
-          height: 300px;
-        }
-        @media screen and (max-width: 1050px) {
-          height: 250px;
-        }
+        // @media screen and (max-width: 1500px) {
+        //   height: 300px;
+        // }
+        // @media screen and (max-width: 1050px) {
+        //   height: 250px;
+        // }
         @media screen and (max-width: 900px) {
           height: 300px;
           margin-bottom: 0;
@@ -193,7 +190,7 @@
           .ImgId {
             height: 100%;
             @media screen and (max-width: 1500px) {
-              height: 80%;
+              height: 60%;
             }
             @media screen and (max-width: 1050px) {
               height: 60%;
