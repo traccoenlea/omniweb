@@ -12,7 +12,7 @@ export const Footer = () => {
           <h3>Pages</h3>
           <div className="links flex flexc jcb">
             <NavLink to="/">Accueil</NavLink>
-            <NavLink to="/projects">Nos projets</NavLink>
+            <NavLink to="/projets">Nos projets</NavLink>
             <NavLink to="/services">Nos services</NavLink>
             <NavLink to="/agence">Notre agence</NavLink>
             <NavLink to="/blog">Notre blog</NavLink>

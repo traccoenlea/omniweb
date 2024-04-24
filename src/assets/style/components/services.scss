@@ -28,7 +28,9 @@
       }
 
       .presentation {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+
         margin-bottom: 5%;
         @media screen and (max-width: 900px) {
           font-size: 1rem;
@@ -188,16 +190,16 @@
           }
 
           .ImgId {
-            height: 100%;
-            @media screen and (max-width: 1500px) {
-              height: 60%;
-            }
-            @media screen and (max-width: 1050px) {
-              height: 60%;
-            }
-            @media screen and (max-width: 720px) {
-              height: 60%;
-            }
+            height: 70%;
+            // @media screen and (max-width: 1500px) {
+            //   height: 60%;
+            // }
+            // @media screen and (max-width: 1050px) {
+            //   height: 60%;
+            // }
+            // @media screen and (max-width: 720px) {
+            //   height: 60%;
+            // }
           }
         }
       }
