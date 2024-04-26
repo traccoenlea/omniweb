@@ -263,11 +263,11 @@
   .bottomPart {
     margin-top: 20px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
     align-items: flex-end;
     .bottomLeftPart {
-      width: 50%;
+      width: 100%;
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-around;
@@ -283,18 +283,24 @@
           margin-right: 5px;
         }
       }
+    }
 
+    .priceMobileContainer {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      font-family: "Agrandir Wide Black";
       .contactMsg {
         font-size: 14px;
-        margin-top: 20px;
+        font-family: "Agrandir";
         .msg {
           text-decoration: underline;
         }
       }
-    }
-
-    .priceContainer {
-      font-family: "Agrandir Wide Black";
     }
   }
 }

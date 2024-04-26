@@ -12,16 +12,17 @@ const ServicesMobile = ({ packs }) => {
   return (
     <div className="packMobileContainer">
       {packs.map((d, i) => (
-        <div key={i} className="packMobile">
+        <div
+          key={i}
+          className="packMobile"
+          onClick={() => handleClickDetail(i)}
+        >
           {/* partie titre + chevron */}
           <div className="topPart">
             <div className={d.titleClassName}>
               <h2 className="">{d.title}</h2>
             </div>
-            <i
-              className="fa-solid fa-chevron-down"
-              onClick={() => handleClickDetail(i)}
-            ></i>
+            <i className="fa-solid fa-chevron-down"></i>
           </div>
 
           {openDetailIndex !== null && openDetailIndex === i && (
@@ -53,6 +54,8 @@ const ServicesMobile = ({ packs }) => {
                     <p>{d.text4}</p>
                   </div>
                 )}
+              </div>
+              <div className="priceMobileContainer">
                 <div className="contactMsg">
                   <p>
                     <NavLink to="/contact" className="msg">
@@ -60,9 +63,9 @@ const ServicesMobile = ({ packs }) => {
                     </NavLink>
                   </p>
                 </div>
-              </div>
-              <div className="priceContainer">
-                <p>{d.price}</p>
+                <div>
+                  <p>{d.price}</p>
+                </div>
               </div>
             </div>
           )}
