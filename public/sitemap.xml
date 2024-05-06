@@ -2,6 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.omnistos.fr/</loc>
-    <lastmod>2024-05-06</lastmod>
+    <lastmod>2024-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.omnistos.fr/agence</loc>
+    <lastmod>2024-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.omnistos.fr/blog</loc>
+    <lastmod>2024-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.omnistos.fr/services</loc>
+    <lastmod>2024-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.omnistos.fr/projets</loc>
+    <lastmod>2024-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.omnistos.fr/contact</loc>
+    <lastmod>2024-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.omnistos.fr/recrutement</loc>
+    <lastmod>2024-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.omnistos.fr/mentions légales</loc>
+    <lastmod>2024-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.omnistos.fr/cgu</loc>
+    <lastmod>2024-05-01</lastmod>
   </url>
 </urlset>
